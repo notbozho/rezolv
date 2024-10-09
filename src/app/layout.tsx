@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${switzer.variable} antialiased`}>
+            <body className={`${switzer.variable} cursor-white antialiased`}>
                 {children}
             </body>
         </html>

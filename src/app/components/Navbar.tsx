@@ -1,46 +1,73 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Arrow from "@/app/assets/icons/arrow-right.svg";
+import { gsap } from "gsap";
+import Image from "next/image";
 
-function Item({
+const NavbarItem = ({
     children,
-    className,
-}: {
-    children: React.ReactNode;
-    className?: string;
-}) {
-    return (
-        <a
-            className={`relative hover:cursor-pointer hover:opacity-80 ${className}`}
-        >
-            {children}
-        </a>
-    );
-}
+    className = "",
+}: Readonly<{ children: React.ReactNode; className?: string }>) => (
+    <a className={`relative cursor-pointer hover:text-red-200 ${className}`}>
+        {children}
+    </a>
+);
 
 export default function Navbar() {
-    return (
-        <div className="container flex py-6 mx-auto justify-between items-center">
-            <div className="flex items-center space-x-8 text-base text-neutral-300">
-                <a
-                    href="/"
-                    className="text-2xl text-white font-semibold pr-6  -mt-1"
-                >
-                    Rezolv
-                </a>
-                <Item>Solutions</Item>
-                <Item className="flex gap-2 items-center">
-                    Blog
-                    <Arrow className="fill-white w-3 h-3 mb-1 -rotate-45 opacity-80" />
-                </Item>
-                <Item> Testimonials</Item>
-                <Item> Portfolio</Item>
-                <Item> About us</Item>
-                <Item> FAQs</Item>
-            </div>
+    useEffect(() => {
+        const tl = gsap.timeline();
 
-            <button className="bg-white text-black px-6 py-1.5 rounded-lg text-base">
-                Contact us
-            </button>
+        tl.from("#navbar", {
+            opacity: 0,
+            duration: 0.4,
+            y: -100,
+            ease: "expo.inOut",
+        }).to("#navbar", {
+            opacity: 1,
+            duration: 1.5,
+            y: 0,
+            ease: "expo.inOut",
+        });
+
+        return () => {
+            tl.kill();
+        };
+    }, []);
+
+    return (
+        <div
+            className="backdrop-blur-[1px], fixed left-0 right-0 top-0 z-50 bg-gradient-to-b from-neutral-950/80 opacity-0"
+            id="navbar"
+        >
+            <div className="container mx-auto flex items-center justify-between py-6">
+                <div className="flex items-center space-x-8 text-base text-neutral-300">
+                    {/* <Image
+                        src="/assets/logo.png"
+                        alt="Rezolv logo"
+                        width={100}
+                        height={100}
+                        className="h-16 w-16"
+                    /> */}
+                    <a
+                        href="/"
+                        className="-mt-1 cursor-pointer pr-6 text-2xl font-semibold text-white"
+                    >
+                        Rezolv
+                    </a>
+                    <NavbarItem>Solutions</NavbarItem>
+                    <NavbarItem className="flex items-center gap-2 hover:fill-red-200">
+                        Blog
+                        <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80 hover:fill-red-200" />
+                    </NavbarItem>
+                    <NavbarItem>Testimonials</NavbarItem>
+                    <NavbarItem>Portfolio</NavbarItem>
+                    <NavbarItem>About us</NavbarItem>
+                    <NavbarItem>FAQs</NavbarItem>
+                </div>
+
+                <button className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200">
+                    Contact us
+                </button>
+            </div>
         </div>
     );
 }
