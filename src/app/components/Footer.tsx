@@ -4,22 +4,23 @@ import Arrow from "@/app/assets/icons/arrow-right.svg";
 
 export default function Footer() {
     return (
-        <footer className="mx-auto w-full">
-            <div className="border-t border-neutral-800 px-6">
-                <div className="flex flex-row items-center justify-around py-10 align-middle">
-                    <div className="flex flex-col items-start">
+        <footer className="w-full">
+            <div className="mx-auto border-t border-neutral-800 bg-gradient-to-b from-black to-neutral-950">
+                <div className="container mx-auto flex flex-row items-center justify-between py-10 align-middle">
+                    <div className="z-20 flex flex-col">
                         <Image
                             src="/assets/logo.png"
                             alt="Rezolv logo"
                             width={100}
                             height={100}
+                            className="-ml-4"
                         />
                         <h1 className="text-3xl font-medium">Rezolv</h1>
                         <p className="font-light text-neutral-400">
                             prodavame pupeshi dini, i smart contracti
                         </p>
                     </div>
-                    <div className="flex items-start space-x-20">
+                    <div className="flex space-x-20">
                         <div className="space-y-5">
                             <p className="text-xl"> Socials</p>
                             <ul className="flex flex-col text-gray-400">

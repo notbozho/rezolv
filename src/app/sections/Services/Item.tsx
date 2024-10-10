@@ -63,7 +63,7 @@ export default function Item({
     return (
         <div
             ref={itemRef}
-            className="relative flex h-full w-full cursor-pointer flex-col justify-between overflow-hidden rounded-lg bg-gradient-to-t from-black/20 to-neutral-800/30 p-5 shadow-glow-sm shadow-neutral-800 backdrop-blur-lg"
+            className="relative flex h-full w-full cursor-pointer flex-col justify-between overflow-hidden rounded-lg border border-neutral-800 bg-gradient-to-t from-black/20 to-neutral-800/30 p-5 backdrop-blur-lg transition-all duration-300 hover:border-red-900/50"
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}

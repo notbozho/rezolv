@@ -40,26 +40,31 @@ export default function Navbar() {
         >
             <div className="container mx-auto flex items-center justify-between py-6">
                 <div className="flex items-center space-x-8 text-base text-neutral-300">
-                    {/* <Image
-                        src="/assets/logo.png"
-                        alt="Rezolv logo"
-                        width={100}
-                        height={100}
-                        className="h-16 w-16"
-                    /> */}
-                    <a
-                        href="/"
-                        className="-mt-1 cursor-pointer pr-6 text-2xl font-semibold text-white"
-                    >
-                        Rezolv
-                    </a>
+                    <div className="flex cursor-pointer items-center">
+                        <Image
+                            src="/assets/logo.png"
+                            alt="Rezolv logo"
+                            width={100}
+                            height={100}
+                            className="h-16 w-16"
+                        />
+                        <a
+                            href="/"
+                            className="cursor-pointer pr-6 text-xl text-white"
+                        >
+                            Rezolv
+                        </a>
+                    </div>
                     <NavbarItem>Solutions</NavbarItem>
                     <NavbarItem className="flex items-center gap-2 hover:fill-red-200">
                         Blog
-                        <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80 hover:fill-red-200" />
+                        <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
                     </NavbarItem>
                     <NavbarItem>Testimonials</NavbarItem>
-                    <NavbarItem>Portfolio</NavbarItem>
+                    <NavbarItem className="flex items-center gap-2 hover:fill-red-200">
+                        Portfolio
+                        <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
+                    </NavbarItem>
                     <NavbarItem>About us</NavbarItem>
                     <NavbarItem>FAQs</NavbarItem>
                 </div>

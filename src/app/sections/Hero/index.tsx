@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Grid from "@/app/components/ui/Grid";
 import { gsap } from "gsap";
 
@@ -62,6 +62,16 @@ export default function Hero() {
                     ease: "expo.inOut",
                 },
                 "<0.3",
+            )
+            .to(
+                "#stats",
+                {
+                    opacity: 1,
+                    duration: 1.5,
+                    y: 0,
+                    ease: "expo.inOut",
+                },
+                "<0.3",
             );
 
         return () => {
@@ -71,18 +81,17 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative h-full w-full">
+        <section className="relative flex h-screen w-full flex-col justify-evenly">
             <div
-                className="absolute h-full w-full bg-gradient-to-tr from-neutral-800 via-black to-neutral-900 opacity-0"
+                className="absolute -z-30 h-full w-full bg-gradient-to-tr from-neutral-800 via-black via-40% to-neutral-900 opacity-0"
                 id="bg"
             ></div>
-            <div className="absolute top-0 h-full w-full bg-noise opacity-[0.07]"></div>
             <div className="absolute -left-1 -top-1 right-0 opacity-0" id="bg">
                 <Grid />
             </div>
-            <div className="container relative mx-auto flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden">
+            <div className="container relative mx-auto flex flex-col items-center justify-center space-y-8 overflow-hidden">
                 <h1
-                    className="text-center text-6xl font-light opacity-0"
+                    className="pt-32 text-center text-6xl font-light opacity-0"
                     id="header"
                 >
                     Elevate your smart contracts <br />
@@ -103,6 +112,42 @@ export default function Hero() {
                 >
                     kur do koleno
                 </button>
+            </div>
+            <div
+                className="mx-auto flex items-center justify-center gap-24 self-end opacity-0"
+                id="stats"
+            >
+                <div className="flex flex-col items-center space-y-2">
+                    <p className="text-5xl font-medium" id="stat-value">
+                        7
+                    </p>
+                    <p className="font-light text-neutral-500">Audits</p>
+                </div>
+                <hr className="h-24 border-r border-neutral-800" />
+                <div className="flex flex-col items-center space-y-2">
+                    <p className="text-5xl font-medium" id="stat-value">
+                        12k
+                    </p>
+                    <p className="font-light text-neutral-500">nSLOC audited</p>
+                </div>
+                <hr className="h-24 border-r border-neutral-800" />
+                <div className="flex flex-col items-center space-y-2">
+                    <p className="text-5xl font-medium" id="stat-value">
+                        6
+                    </p>
+                    <p className="font-light text-neutral-500">
+                        Criticals Found
+                    </p>
+                </div>
+                <hr className="h-24 border-r border-neutral-800" />
+                <div className="flex flex-col items-center space-y-2">
+                    <p className="text-5xl font-medium" id="stat-value">
+                        34
+                    </p>
+                    <p className="font-light text-neutral-500">
+                        Highs/Mediums Found
+                    </p>
+                </div>
             </div>
         </section>
     );
