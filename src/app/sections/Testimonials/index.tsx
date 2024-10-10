@@ -123,7 +123,7 @@ export default function Testimonials() {
                                                 className="h-12 w-12 rounded-full shadow-sm shadow-red-500"
                                             />
                                             <div className="flex flex-col font-medium">
-                                                <p className="">
+                                                <p className="text-white">
                                                     {testimonial.name}
                                                 </p>
                                                 <p className="text-neutral-500">

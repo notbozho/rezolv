@@ -44,7 +44,7 @@ export default function ScrollToTop() {
                 onClick={handleScrollToTop}
                 className="pointer-events-none invisible fixed bottom-10 right-10 z-50 cursor-pointer rounded-lg border border-neutral-800 bg-neutral-900/60 p-4 opacity-0 backdrop-blur-sm md:visible"
             >
-                <Arrow className="h-6 w-6 -rotate-90" />
+                <Arrow className="h-6 w-6 -rotate-90 text-white" />
             </div>
         </div>
     );
