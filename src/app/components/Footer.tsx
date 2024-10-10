@@ -15,14 +15,16 @@ export default function Footer() {
                             height={100}
                             className="-ml-4"
                         />
-                        <h1 className="text-3xl font-medium">Rezolv</h1>
+                        <h1 className="text-3xl font-medium text-white">
+                            Rezolv
+                        </h1>
                         <p className="font-light text-neutral-400">
                             prodavame pupeshi dini, i smart contracti
                         </p>
                     </div>
                     <div className="flex space-x-20">
                         <div className="space-y-5">
-                            <p className="text-xl"> Socials</p>
+                            <p className="text-xl text-white"> Socials</p>
                             <ul className="flex flex-col text-gray-400">
                                 <li>
                                     <a
@@ -54,7 +56,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div className="space-y-5">
-                            <p className="text-xl">Home</p>
+                            <p className="text-xl text-white">Home</p>
                             <nav className="flex flex-col text-gray-400">
                                 <a
                                     href="#"

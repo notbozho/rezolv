@@ -91,7 +91,7 @@ export default function Hero() {
             </div>
             <div className="container relative mx-auto flex flex-col items-center justify-center space-y-8 overflow-hidden">
                 <h1
-                    className="pt-32 text-center text-6xl font-light opacity-0"
+                    className="pt-32 text-center text-6xl font-light text-white opacity-0"
                     id="header"
                 >
                     Elevate your smart contracts <br />
@@ -118,21 +118,30 @@ export default function Hero() {
                 id="stats"
             >
                 <div className="flex flex-col items-center space-y-2">
-                    <p className="text-5xl font-medium" id="stat-value">
+                    <p
+                        className="text-5xl font-medium text-white"
+                        id="stat-value"
+                    >
                         7
                     </p>
                     <p className="font-light text-neutral-500">Audits</p>
                 </div>
                 <hr className="h-24 border-r border-neutral-800" />
                 <div className="flex flex-col items-center space-y-2">
-                    <p className="text-5xl font-medium" id="stat-value">
+                    <p
+                        className="text-5xl font-medium text-white"
+                        id="stat-value"
+                    >
                         12k
                     </p>
                     <p className="font-light text-neutral-500">nSLOC audited</p>
                 </div>
                 <hr className="h-24 border-r border-neutral-800" />
                 <div className="flex flex-col items-center space-y-2">
-                    <p className="text-5xl font-medium" id="stat-value">
+                    <p
+                        className="text-5xl font-medium text-white"
+                        id="stat-value"
+                    >
                         6
                     </p>
                     <p className="font-light text-neutral-500">
@@ -141,7 +150,10 @@ export default function Hero() {
                 </div>
                 <hr className="h-24 border-r border-neutral-800" />
                 <div className="flex flex-col items-center space-y-2">
-                    <p className="text-5xl font-medium" id="stat-value">
+                    <p
+                        className="text-5xl font-medium text-white"
+                        id="stat-value"
+                    >
                         34
                     </p>
                     <p className="font-light text-neutral-500">

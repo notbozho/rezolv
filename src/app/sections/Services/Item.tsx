@@ -74,7 +74,7 @@ export default function Item({
                 <Icon className="invert" />
             </div>
             <div className="flex flex-col">
-                <p className="text-3xl font-medium">{header}</p>
+                <p className="text-3xl font-medium text-white">{header}</p>
                 <p className="font-light text-neutral-400">{description}</p>
             </div>
 

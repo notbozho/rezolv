@@ -74,7 +74,10 @@ export default function Services() {
                     <p className="relative bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 text-center font-semibold tracking-wider text-transparent">
                         Solutions
                     </p>
-                    <h2 className="pb-4 text-center text-5xl" id="header">
+                    <h2
+                        className="pb-4 text-center text-5xl text-white"
+                        id="header"
+                    >
                         Your partner in the web3 world
                     </h2>
                     <p

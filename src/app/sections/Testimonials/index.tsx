@@ -81,7 +81,10 @@ export default function Testimonials() {
                     <p className="bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 font-semibold tracking-wider text-transparent">
                         Testimonials
                     </p>
-                    <h2 className="pb-4 text-4xl md:text-5xl" id="header">
+                    <h2
+                        className="pb-4 text-4xl text-white md:text-5xl"
+                        id="header"
+                    >
                         Our work through their words
                     </h2>
                     <p
