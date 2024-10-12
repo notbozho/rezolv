@@ -65,7 +65,7 @@ export default function FAQ() {
                                         {faq.question}
                                     </p>
                                     <div
-                                        className={`${clsx(open == null || open != index ? "h-0" : "h-fit")} overflow-hidden`}
+                                        className={`${clsx(open == null || open != index ? "h-0" : "h-fit")} overflow-hidden font-light text-neutral-300`}
                                     >
                                         <p>{faq.answer}</p>
                                     </div>

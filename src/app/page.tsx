@@ -8,7 +8,7 @@ import Services from "./sections/Services";
 import Testimonials from "./sections/Testimonials";
 import "./styles.css";
 
-export default function Home() {
+export default function HomePage() {
     return (
         <>
             <Navbar />

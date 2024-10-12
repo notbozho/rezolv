@@ -10,7 +10,38 @@ const switzer = localFont({
 
 export const metadata: Metadata = {
     title: "Rezolv",
-    description: "Smart Contract Development & Security Company",
+    description: "Expert web3 development & security",
+    openGraph: {
+        title: "Rezolv",
+        description: "Expert web3 development & security",
+        type: "website",
+        locale: "en_US",
+        url: "https://rezolvsolutions.com",
+        siteName: "Rezolv",
+        images: [
+            {
+                url: "assets/metadata.jpg",
+                width: 1200,
+                height: 675,
+                alt: "Rezolv Metadata Image",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Rezolv Solutions",
+        description: "Expert web3 development & security",
+        images: ["assets/metadata.jpg"],
+    },
+    keywords: [
+        "web3",
+        "development",
+        "security",
+        "blockchain",
+        "ethereum",
+        "security",
+        "audit",
+    ],
 };
 
 export default function RootLayout({
