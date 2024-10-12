@@ -6,18 +6,3 @@ body {
     margin: 0;
     padding: 0;
 }
-
-.parallax-container {
-    @apply relative overflow-hidden;
-}
-
-.parallax-background {
-    @apply absolute w-full h-full;
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-
-.hero,
-.services {
-    @apply relative z-10 bg-transparent;
-}

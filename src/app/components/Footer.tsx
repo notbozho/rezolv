@@ -87,7 +87,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="flex items-center justify-center border-t border-neutral-900 py-6">
-                    <span className="text-gray-500">© 2024</span>
+                    <span className="text-gray-500">
+                        © 2024 Rezolv Solutions All Rights Reserved
+                    </span>
                 </div>
             </div>
         </footer>

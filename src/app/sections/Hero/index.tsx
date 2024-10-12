@@ -91,14 +91,14 @@ export default function Hero() {
             </div>
             <div className="container relative mx-auto flex flex-col items-center justify-center space-y-8 overflow-hidden">
                 <h1
-                    className="pt-32 text-center text-6xl font-light text-white opacity-0"
+                    className="pt-32 text-center text-2xl font-light text-white opacity-0 sm:text-3xl md:text-6xl"
                     id="header"
                 >
                     Elevate your smart contracts <br />
                     with expert development and security reviews
                 </h1>
                 <p
-                    className="max-w-screen-lg pb-10 text-center text-neutral-500 opacity-0"
+                    className="max-w-[400px] pb-10 text-center text-xs text-neutral-500 opacity-0 sm:text-base lg:max-w-screen-lg"
                     id="subheader"
                 >
                     Ipos sum dolor sit amet, consectetur adipiscing elit. Lorem
@@ -114,49 +114,53 @@ export default function Hero() {
                 </button>
             </div>
             <div
-                className="mx-auto flex items-center justify-center gap-24 self-end opacity-0"
+                className="mx-auto flex items-center justify-center gap-[4vw] self-end py-2 opacity-0 lg:py-0"
                 id="stats"
             >
                 <div className="flex flex-col items-center space-y-2">
                     <p
-                        className="text-5xl font-medium text-white"
+                        className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"
                     >
                         7
                     </p>
-                    <p className="font-light text-neutral-500">Audits</p>
+                    <p className="text-sm font-light text-neutral-500 lg:text-base">
+                        Audits
+                    </p>
                 </div>
                 <hr className="h-24 border-r border-neutral-800" />
                 <div className="flex flex-col items-center space-y-2">
                     <p
-                        className="text-5xl font-medium text-white"
+                        className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"
                     >
                         12k
                     </p>
-                    <p className="font-light text-neutral-500">nSLOC audited</p>
+                    <p className="text-sm font-light text-neutral-500 lg:text-base">
+                        nSLOC audited
+                    </p>
                 </div>
                 <hr className="h-24 border-r border-neutral-800" />
                 <div className="flex flex-col items-center space-y-2">
                     <p
-                        className="text-5xl font-medium text-white"
+                        className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"
                     >
                         6
                     </p>
-                    <p className="font-light text-neutral-500">
+                    <p className="text-sm font-light text-neutral-500 lg:text-base">
                         Criticals Found
                     </p>
                 </div>
                 <hr className="h-24 border-r border-neutral-800" />
                 <div className="flex flex-col items-center space-y-2">
                     <p
-                        className="text-5xl font-medium text-white"
+                        className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"
                     >
                         34
                     </p>
-                    <p className="font-light text-neutral-500">
+                    <p className="text-sm font-light text-neutral-500 lg:text-base">
                         Highs/Mediums Found
                     </p>
                 </div>

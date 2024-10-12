@@ -1,18 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Arrow from "@/app/assets/icons/arrow-right.svg";
 import { gsap } from "gsap";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import clsx from "clsx";
 
 const NavbarItem = ({
     children,
+    active = false,
     className = "",
-}: Readonly<{ children: React.ReactNode; className?: string }>) => (
-    <a className={`relative cursor-pointer hover:text-red-200 ${className}`}>
+}: Readonly<{
+    children: React.ReactNode;
+    active?: boolean;
+    className?: string;
+}>) => (
+    <a
+        className={`relative cursor-pointer ${clsx(active && "text-white")} duration-400 transition-all ease-in-out hover:text-red-200 ${className}`}
+    >
         {children}
     </a>
 );
 
 export default function Navbar() {
+    const router = useRouter();
+    const [activeSection, setActiveSection] = useState("");
+
+    const isActive = (section: string) => activeSection === section;
+
     useEffect(() => {
         const tl = gsap.timeline();
 
@@ -28,8 +42,27 @@ export default function Navbar() {
             ease: "expo.inOut",
         });
 
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            { threshold: 0.7 },
+        );
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
         return () => {
             tl.kill();
+            sections.forEach((section) => {
+                observer.unobserve(section);
+            });
         };
     }, []);
 
@@ -40,7 +73,10 @@ export default function Navbar() {
         >
             <div className="container mx-auto flex items-center justify-between py-6">
                 <div className="flex items-center space-x-8 text-base text-neutral-300">
-                    <div className="flex cursor-pointer items-center">
+                    <div
+                        className="flex cursor-pointer items-center"
+                        onClick={() => router.push("/")}
+                    >
                         <Image
                             src="/assets/logo.png"
                             alt="Rezolv logo"
@@ -48,10 +84,7 @@ export default function Navbar() {
                             height={100}
                             className="h-16 w-16"
                         />
-                        <a
-                            href="/"
-                            className="cursor-pointer pr-6 text-xl text-white"
-                        >
+                        <a className="cursor-pointer pr-6 text-xl text-white">
                             Rezolv
                         </a>
                     </div>
@@ -60,13 +93,19 @@ export default function Navbar() {
                         Blog
                         <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
                     </NavbarItem>
-                    <NavbarItem>Testimonials</NavbarItem>
+                    <div onClick={() => router.push("/#testimonials")}>
+                        <NavbarItem active={isActive("testimonials")}>
+                            Testimonials
+                        </NavbarItem>
+                    </div>
                     <NavbarItem className="flex items-center gap-2 hover:fill-red-200">
                         Portfolio
                         <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
                     </NavbarItem>
                     <NavbarItem>About us</NavbarItem>
-                    <NavbarItem>FAQs</NavbarItem>
+                    <div onClick={() => router.push("/#faq")}>
+                        <NavbarItem active={isActive("faq")}>FAQs</NavbarItem>
+                    </div>
                 </div>
 
                 <button className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200">

@@ -39,11 +39,11 @@ export default function Item({
             gsap.set(gradientRef.current, {
                 opacity: 1,
                 scale: 0.2,
-                animationDelay: 0.5,
+                animationDelay: 0.4,
             });
             gsap.to(gradientRef.current, {
                 scale: 1,
-                duration: 0.5,
+                duration: 0.4,
                 ease: "circ.out",
             });
         }
@@ -54,7 +54,7 @@ export default function Item({
             gsap.to(gradientRef.current, {
                 opacity: 0,
                 scale: 0,
-                duration: 0.3,
+                duration: 0.2,
                 ease: "power2.out",
             });
         }
@@ -63,7 +63,7 @@ export default function Item({
     return (
         <div
             ref={itemRef}
-            className="relative flex h-full w-full cursor-pointer flex-col justify-between overflow-hidden rounded-lg border border-neutral-800 bg-gradient-to-t from-black/20 to-neutral-800/30 p-5 backdrop-blur-lg transition-all duration-300 hover:border-red-900/50"
+            className="relative flex h-full w-full cursor-pointer flex-col justify-between overflow-hidden rounded-lg border border-neutral-800 bg-gradient-to-t from-black/20 to-neutral-800/30 p-5 backdrop-blur-sm transition-all duration-300 hover:border-red-900/50"
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}

@@ -103,11 +103,11 @@ export default function Testimonials() {
                     >
                         <div
                             className="embla__container flex items-center rounded-lg align-middle shadow-lg"
-                            style={{ touchAction: "pan-y pinch-zoom;" }}
+                            style={{ touchAction: "pan-y pinch-zoom" }}
                         >
                             {testimonials.map((testimonial, index) => (
                                 <div key={index} className="embla__slide pl-4">
-                                    <div className="embla__slide__number flex min-h-[26rem] w-[32rem] min-w-0 select-none flex-col items-start justify-between space-y-6 rounded-lg bg-neutral-900 p-4">
+                                    <div className="embla__slide__number flex min-h-[26rem] w-[32rem] min-w-0 select-none flex-col items-start justify-between space-y-6 rounded-lg bg-neutral-900/50 p-4 backdrop-blur-md">
                                         <div className="flex h-6 w-6 items-center justify-center self-start">
                                             <Quote className="text-red-700/80" />
                                         </div>
