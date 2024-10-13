@@ -1,6 +1,6 @@
 "use client";
 
-import React, from "react";
+import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Grid from "../components/ui/Grid";
