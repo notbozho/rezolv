@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         siteName: "Rezolv",
         images: [
             {
-                url: "assets/metadata.jpg",
+                url: "/assets/metadata.jpg",
                 width: 1200,
                 height: 675,
                 alt: "Rezolv Metadata Image",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Rezolv Solutions",
         description: "Expert web3 development & security",
-        images: ["assets/metadata.jpg"],
+        images: ["/assets/metadata.jpg"],
     },
     keywords: [
         "web3",
