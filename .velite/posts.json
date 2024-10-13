@@ -1,0 +1,63 @@
+[
+  {
+    "title": "How to Get Started with Web3 Auditing",
+    "slug": "posts/introduction",
+    "description": "Understand the tools and methodologies involved in Web3 auditing and how to get started with the process.",
+    "published": true,
+    "date": "2024-10-13T00:00:00.000Z",
+    "cover": {
+      "src": "/static/introduction-a2886c8a.png",
+      "height": 816,
+      "width": 1456,
+      "blurDataURL": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACwAQCdASoIAAQADMDOJbACsADcy1yAAP5vAOSKKxLUFgVhAAA=",
+      "blurWidth": 8,
+      "blurHeight": 4
+    },
+    "metadata": {
+      "readingTime": 1,
+      "wordCount": 233
+    },
+    "content": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(i){const r={a:\"a\",h1:\"h1\",h2:\"h2\",h3:\"h3\",hr:\"hr\",li:\"li\",p:\"p\",strong:\"strong\",ul:\"ul\",...i.components};return t(e,{children:[n(r.h1,{children:\"How to Get Started with Web3 Auditing\"}),\"\\n\",n(r.p,{children:\"Web3 auditing is an essential process for ensuring the security and efficiency of decentralized protocols and smart contracts. Whether you're just starting out or you're an experienced developer, understanding the tools and methodologies involved in Web3 auditing is crucial.\"}),\"\\n\",n(r.p,{children:\"Here’s a quick introduction video:\"}),\"\\n\",n(r.h2,{children:\"What is Web3 Auditing?\"}),\"\\n\",n(r.p,{children:\"Web3 auditing involves the process of reviewing decentralized applications (dApps) and smart contracts to find potential vulnerabilities, security issues, or inefficiencies in the code. This process ensures that the code behaves as intended and secures user funds or data from malicious actors.\"}),\"\\n\",n(r.h2,{children:\"Key Tools for Web3 Auditors\"}),\"\\n\",n(r.p,{children:\"Some of the most popular tools for Web3 auditing include:\"}),\"\\n\",t(r.ul,{children:[\"\\n\",t(r.li,{children:[n(r.strong,{children:\"Slither\"}),\": A static analysis tool for Solidity smart contracts.\"]}),\"\\n\",t(r.li,{children:[n(r.strong,{children:\"MythX\"}),\": A comprehensive security analysis platform for Ethereum smart contracts.\"]}),\"\\n\",t(r.li,{children:[n(r.strong,{children:\"Echidna\"}),\": A tool for fuzzing Ethereum smart contracts to identify potential issues in various scenarios.\"]}),\"\\n\"]}),\"\\n\",n(r.hr,{}),\"\\n\",n(r.h3,{children:\"Learn More\"}),\"\\n\",n(r.p,{children:\"Want to dive deeper into the world of Web3 auditing? Explore the following resources to boost your skills and knowledge:\"}),\"\\n\",t(r.ul,{children:[\"\\n\",n(r.li,{children:n(r.a,{href:\"https://docs.soliditylang.org/\",children:\"Official Solidity Documentation\"})}),\"\\n\",n(r.li,{children:n(r.a,{href:\"https://trailofbits.com/\",children:\"Trail of Bits - Smart Contract Auditing\"})}),\"\\n\",n(r.li,{children:n(r.a,{href:\"https://consensys.net/diligence/\",children:\"Diligence - ConsenSys\"})}),\"\\n\"]}),\"\\n\",n(r.hr,{}),\"\\n\",n(r.p,{children:n(r.strong,{children:\"Conclusion\"})}),\"\\n\",n(r.p,{children:\"Web3 auditing plays a vital role in the decentralized world, and having the right tools and techniques can make all the difference. Whether you're a beginner or an advanced developer, it's essential to stay up-to-date with the latest practices and tools.\"}),\"\\n\",n(\"metadata\",{children:t(r.p,{children:[\"Reading time: \",metadata.readingTime,\" minutes | Word count:\",\" \",\"\\n\",metadata.wordCount,\" words\"]})})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "permalink": "/blog/posts/introduction"
+  },
+  {
+    "title": "How to Get Started with Web3 Auditing",
+    "slug": "posts/sintroduction copy 2",
+    "published": true,
+    "date": "2024-10-13T00:00:00.000Z",
+    "cover": {
+      "src": "/static/introduction-a2886c8a.png",
+      "height": 816,
+      "width": 1456,
+      "blurDataURL": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACwAQCdASoIAAQADMDOJbACsADcy1yAAP5vAOSKKxLUFgVhAAA=",
+      "blurWidth": 8,
+      "blurHeight": 4
+    },
+    "metadata": {
+      "readingTime": 1,
+      "wordCount": 233
+    },
+    "content": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(i){const r={a:\"a\",h1:\"h1\",h2:\"h2\",h3:\"h3\",hr:\"hr\",li:\"li\",p:\"p\",strong:\"strong\",ul:\"ul\",...i.components};return t(e,{children:[n(r.h1,{children:\"How to Get Started with Web3 Auditing\"}),\"\\n\",n(r.p,{children:\"Web3 auditing is an essential process for ensuring the security and efficiency of decentralized protocols and smart contracts. Whether you're just starting out or you're an experienced developer, understanding the tools and methodologies involved in Web3 auditing is crucial.\"}),\"\\n\",n(r.p,{children:\"Here’s a quick introduction video:\"}),\"\\n\",n(r.h2,{children:\"What is Web3 Auditing?\"}),\"\\n\",n(r.p,{children:\"Web3 auditing involves the process of reviewing decentralized applications (dApps) and smart contracts to find potential vulnerabilities, security issues, or inefficiencies in the code. This process ensures that the code behaves as intended and secures user funds or data from malicious actors.\"}),\"\\n\",n(r.h2,{children:\"Key Tools for Web3 Auditors\"}),\"\\n\",n(r.p,{children:\"Some of the most popular tools for Web3 auditing include:\"}),\"\\n\",t(r.ul,{children:[\"\\n\",t(r.li,{children:[n(r.strong,{children:\"Slither\"}),\": A static analysis tool for Solidity smart contracts.\"]}),\"\\n\",t(r.li,{children:[n(r.strong,{children:\"MythX\"}),\": A comprehensive security analysis platform for Ethereum smart contracts.\"]}),\"\\n\",t(r.li,{children:[n(r.strong,{children:\"Echidna\"}),\": A tool for fuzzing Ethereum smart contracts to identify potential issues in various scenarios.\"]}),\"\\n\"]}),\"\\n\",n(r.hr,{}),\"\\n\",n(r.h3,{children:\"Learn More\"}),\"\\n\",n(r.p,{children:\"Want to dive deeper into the world of Web3 auditing? Explore the following resources to boost your skills and knowledge:\"}),\"\\n\",t(r.ul,{children:[\"\\n\",n(r.li,{children:n(r.a,{href:\"https://docs.soliditylang.org/\",children:\"Official Solidity Documentation\"})}),\"\\n\",n(r.li,{children:n(r.a,{href:\"https://trailofbits.com/\",children:\"Trail of Bits - Smart Contract Auditing\"})}),\"\\n\",n(r.li,{children:n(r.a,{href:\"https://consensys.net/diligence/\",children:\"Diligence - ConsenSys\"})}),\"\\n\"]}),\"\\n\",n(r.hr,{}),\"\\n\",n(r.p,{children:n(r.strong,{children:\"Conclusion\"})}),\"\\n\",n(r.p,{children:\"Web3 auditing plays a vital role in the decentralized world, and having the right tools and techniques can make all the difference. Whether you're a beginner or an advanced developer, it's essential to stay up-to-date with the latest practices and tools.\"}),\"\\n\",n(\"metadata\",{children:t(r.p,{children:[\"Reading time: \",metadata.readingTime,\" minutes | Word count:\",\" \",\"\\n\",metadata.wordCount,\" words\"]})})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "permalink": "/blog/posts/sintroduction copy 2"
+  },
+  {
+    "title": "How to Get Started with Web3 Auditing",
+    "slug": "posts/zintroduction copy",
+    "published": true,
+    "date": "2024-10-13T00:00:00.000Z",
+    "cover": {
+      "src": "/static/introduction-a2886c8a.png",
+      "height": 816,
+      "width": 1456,
+      "blurDataURL": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACwAQCdASoIAAQADMDOJbACsADcy1yAAP5vAOSKKxLUFgVhAAA=",
+      "blurWidth": 8,
+      "blurHeight": 4
+    },
+    "metadata": {
+      "readingTime": 1,
+      "wordCount": 233
+    },
+    "content": "const{Fragment:e,jsx:n,jsxs:t}=arguments[0];function _createMdxContent(i){const r={a:\"a\",h1:\"h1\",h2:\"h2\",h3:\"h3\",hr:\"hr\",li:\"li\",p:\"p\",strong:\"strong\",ul:\"ul\",...i.components};return t(e,{children:[n(r.h1,{children:\"How to Get Started with Web3 Auditing\"}),\"\\n\",n(r.p,{children:\"Web3 auditing is an essential process for ensuring the security and efficiency of decentralized protocols and smart contracts. Whether you're just starting out or you're an experienced developer, understanding the tools and methodologies involved in Web3 auditing is crucial.\"}),\"\\n\",n(r.p,{children:\"Here’s a quick introduction video:\"}),\"\\n\",n(r.h2,{children:\"What is Web3 Auditing?\"}),\"\\n\",n(r.p,{children:\"Web3 auditing involves the process of reviewing decentralized applications (dApps) and smart contracts to find potential vulnerabilities, security issues, or inefficiencies in the code. This process ensures that the code behaves as intended and secures user funds or data from malicious actors.\"}),\"\\n\",n(r.h2,{children:\"Key Tools for Web3 Auditors\"}),\"\\n\",n(r.p,{children:\"Some of the most popular tools for Web3 auditing include:\"}),\"\\n\",t(r.ul,{children:[\"\\n\",t(r.li,{children:[n(r.strong,{children:\"Slither\"}),\": A static analysis tool for Solidity smart contracts.\"]}),\"\\n\",t(r.li,{children:[n(r.strong,{children:\"MythX\"}),\": A comprehensive security analysis platform for Ethereum smart contracts.\"]}),\"\\n\",t(r.li,{children:[n(r.strong,{children:\"Echidna\"}),\": A tool for fuzzing Ethereum smart contracts to identify potential issues in various scenarios.\"]}),\"\\n\"]}),\"\\n\",n(r.hr,{}),\"\\n\",n(r.h3,{children:\"Learn More\"}),\"\\n\",n(r.p,{children:\"Want to dive deeper into the world of Web3 auditing? Explore the following resources to boost your skills and knowledge:\"}),\"\\n\",t(r.ul,{children:[\"\\n\",n(r.li,{children:n(r.a,{href:\"https://docs.soliditylang.org/\",children:\"Official Solidity Documentation\"})}),\"\\n\",n(r.li,{children:n(r.a,{href:\"https://trailofbits.com/\",children:\"Trail of Bits - Smart Contract Auditing\"})}),\"\\n\",n(r.li,{children:n(r.a,{href:\"https://consensys.net/diligence/\",children:\"Diligence - ConsenSys\"})}),\"\\n\"]}),\"\\n\",n(r.hr,{}),\"\\n\",n(r.p,{children:n(r.strong,{children:\"Conclusion\"})}),\"\\n\",n(r.p,{children:\"Web3 auditing plays a vital role in the decentralized world, and having the right tools and techniques can make all the difference. Whether you're a beginner or an advanced developer, it's essential to stay up-to-date with the latest practices and tools.\"}),\"\\n\",n(\"metadata\",{children:t(r.p,{children:[\"Reading time: \",metadata.readingTime,\" minutes | Word count:\",\" \",\"\\n\",metadata.wordCount,\" words\"]})})]})}return{default:function(e={}){const{wrapper:t}=e.components||{};return t?n(t,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};",
+    "permalink": "/blog/posts/zintroduction copy"
+  }
+]

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Arrow from "@/app/assets/icons/arrow-right.svg";
 import { gsap } from "gsap";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import clsx from "clsx";
 
 const NavbarItem = ({
@@ -15,7 +15,7 @@ const NavbarItem = ({
     className?: string;
 }>) => (
     <a
-        className={`relative cursor-pointer ${clsx(active && "text-white")} duration-400 transition-all ease-in-out hover:text-red-200 ${className}`}
+        className={`relative cursor-pointer ${clsx(active && "font-medium text-white")} transition-all duration-500 ease-in-out hover:text-red-200 ${className}`}
     >
         {children}
     </a>
@@ -23,9 +23,13 @@ const NavbarItem = ({
 
 export default function Navbar() {
     const router = useRouter();
+    const pathname = usePathname();
     const [activeSection, setActiveSection] = useState("");
 
-    const isActive = (section: string) => activeSection === section;
+    const isActive = (path: string, section?: string) => {
+        if (section) return activeSection === section;
+        return pathname === path;
+    };
 
     useEffect(() => {
         const tl = gsap.timeline();
@@ -89,12 +93,17 @@ export default function Navbar() {
                         </a>
                     </div>
                     <NavbarItem>Solutions</NavbarItem>
-                    <NavbarItem className="flex items-center gap-2 hover:fill-red-200">
-                        Blog
-                        <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
-                    </NavbarItem>
+                    <div onClick={() => router.push("/blog")}>
+                        <NavbarItem
+                            active={isActive("/blog", "")}
+                            className="flex items-center gap-2 hover:fill-red-200"
+                        >
+                            Blog
+                            {/* <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" /> */}
+                        </NavbarItem>
+                    </div>
                     <div onClick={() => router.push("/#testimonials")}>
-                        <NavbarItem active={isActive("testimonials")}>
+                        <NavbarItem active={isActive("/", "testimonials")}>
                             Testimonials
                         </NavbarItem>
                     </div>
@@ -104,7 +113,9 @@ export default function Navbar() {
                     </NavbarItem>
                     <NavbarItem>About us</NavbarItem>
                     <div onClick={() => router.push("/#faq")}>
-                        <NavbarItem active={isActive("faq")}>FAQs</NavbarItem>
+                        <NavbarItem active={isActive("/", "faq")}>
+                            FAQs
+                        </NavbarItem>
                     </div>
                 </div>
 

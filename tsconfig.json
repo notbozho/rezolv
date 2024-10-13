@@ -18,7 +18,8 @@
             }
         ],
         "paths": {
-            "@/*": ["./src/*"]
+            "@/*": ["./src/*"],
+            "#site/content": ["./.velite"]
         }
     },
     "include": [
@@ -26,7 +27,9 @@
         "next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
-        ".next/types/**/*.ts"
+        ".next/types/**/*.ts",
+        "ts.mjs",
+        "./.velite"
     ],
     "exclude": ["node_modules"]
 }

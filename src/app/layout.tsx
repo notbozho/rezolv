@@ -9,6 +9,7 @@ const switzer = localFont({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://rezolvsolutions.com"),
     title: "Rezolv",
     description: "Expert web3 development & security",
     openGraph: {
