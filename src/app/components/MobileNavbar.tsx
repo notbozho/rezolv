@@ -169,7 +169,7 @@ export default function MobileNavbar({
                     id="mobile_nav_bg"
                 >
                     <div
-                        className="flex cursor-pointer items-center pt-20"
+                        className="flex cursor-pointer items-center pt-10"
                         onClick={() => router.push("/")}
                         id="mobile_nav_logo"
                     >
@@ -184,7 +184,7 @@ export default function MobileNavbar({
                             Rezolv
                         </a>
                     </div>
-                    <div className="flex flex-col items-center gap-8 text-white">
+                    <div className="flex flex-col items-center gap-6 text-white">
                         <NavbarItem id="mobile_nav_item">Solutions</NavbarItem>
                         <div
                             onClick={() => router.push("/blog")}
@@ -225,7 +225,7 @@ export default function MobileNavbar({
                         </div>
                     </div>
                     <div
-                        className="mb-16 rounded-full border border-red-500 p-4"
+                        className="mb-24 rounded-full border border-red-500 p-4"
                         onClick={handleMenu}
                         id="mobile_nav_exit"
                     >
