@@ -44,7 +44,7 @@ export async function generateMetadata({
         description: post.description,
         openGraph: {
             title: post.title,
-            description: post.description,
+            description: post.description || post.excerpt,
             url: `${url}/blog/${post.slug}`,
             type: "article",
             images: [

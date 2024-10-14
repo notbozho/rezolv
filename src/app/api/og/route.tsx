@@ -13,7 +13,7 @@ export async function GET(request) {
         return new Response("Missing slug", { status: 400 });
     }
 
-    const post = allPosts.find((post) => post.slug === "posts/" + slug);
+    const post = allPosts.find((post) => post.slug === slug);
 
     if (!post) {
         return new Response("Post not found", { status: 404 });
