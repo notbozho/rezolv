@@ -4,6 +4,11 @@ import rehypePrettyCode from "rehype-pretty-code";
 // `s` is extended from Zod with some custom schemas,
 // you can also import re-exported `z` from `velite` if you don't need these extension schemas.
 
+/** @type {import('rehype-pretty-code').Options} */
+const options = {
+    defaultLang: "js",
+};
+
 export default defineConfig({
     root: "content",
     collections: {
@@ -20,14 +25,15 @@ export default defineConfig({
                     cover: s.image(), // input image relative path, output image object with blurImage.
                     metadata: s.metadata(), // extract markdown reading-time, word-count, etc.
                     content: s.mdx(),
+                    excerpt: s.excerpt({ length: 150 }),
                 })
                 .transform((data) => ({
                     ...data,
-                    permalink: `/blog/${data.slug}`,
+                    permalink: `${data.slug}`,
                 })),
         },
     },
     mdx: {
-        rehypePlugins: [rehypePrettyCode],
+        rehypePlugins: [[rehypePrettyCode, options]],
     },
 });

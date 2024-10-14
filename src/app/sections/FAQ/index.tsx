@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Arrow from "@/app/assets/icons/arrow-right.svg";
 import clsx from "clsx";
@@ -93,16 +95,10 @@ export default function FAQ() {
                     <p className="bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 font-semibold tracking-wider text-transparent">
                         Frequently asked questions
                     </p>
-                    <h2
-                        className="pb-4 text-4xl text-white md:text-5xl"
-                        id="header"
-                    >
+                    <h2 className="pb-4 text-4xl text-white md:text-5xl">
                         Your Questions, Answered
                     </h2>
-                    <p
-                        className="self-end pb-10 text-neutral-500 md:max-w-md"
-                        id="subheader"
-                    >
+                    <p className="self-end pb-10 text-neutral-500 md:max-w-md">
                         Everything you need to know, in one place
                     </p>
                 </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import useEmblaCarousel from "embla-carousel-react";
 import React, { useEffect } from "react";
 import Autoplay from "embla-carousel-autoplay";
@@ -81,16 +83,10 @@ export default function Testimonials() {
                     <p className="bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 font-semibold tracking-wider text-transparent">
                         Testimonials
                     </p>
-                    <h2
-                        className="pb-4 text-4xl text-white md:text-5xl"
-                        id="header"
-                    >
+                    <h2 className="pb-4 text-4xl text-white md:text-5xl">
                         Our work through their words
                     </h2>
-                    <p
-                        className="pb-10 text-neutral-500 md:max-w-md"
-                        id="subheader"
-                    >
+                    <p className="pb-10 text-neutral-500 md:max-w-md">
                         Find out why we are trusted by so many
                     </p>
                 </div>

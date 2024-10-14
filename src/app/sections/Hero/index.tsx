@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import Grid from "@/app/components/ui/Grid";
 import { gsap } from "gsap";

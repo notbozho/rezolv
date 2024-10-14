@@ -36,6 +36,11 @@ body {
     font-family: var(--font-switzer);
 }
 
+::selection {
+    background-color: red;
+    color: white;
+}
+
 html {
     scroll-behavior: smooth;
 }

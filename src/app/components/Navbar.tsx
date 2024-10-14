@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import Arrow from "@/app/assets/icons/arrow-right.svg";
 import { gsap } from "gsap";
@@ -31,6 +33,10 @@ export default function Navbar() {
         return pathname === path;
     };
 
+    const inBlog = () => {
+        return pathname.includes("/blog");
+    };
+
     useEffect(() => {
         const tl = gsap.timeline();
 
@@ -46,6 +52,12 @@ export default function Navbar() {
             ease: "expo.inOut",
         });
 
+        return () => {
+            tl.kill();
+        };
+    }, []);
+
+    useEffect(() => {
         const sections = document.querySelectorAll("section");
         const observer = new IntersectionObserver(
             (entries) => {
@@ -63,12 +75,11 @@ export default function Navbar() {
         });
 
         return () => {
-            tl.kill();
             sections.forEach((section) => {
                 observer.unobserve(section);
             });
         };
-    }, []);
+    }, [pathname]);
 
     return (
         <div
@@ -95,7 +106,7 @@ export default function Navbar() {
                     <NavbarItem>Solutions</NavbarItem>
                     <div onClick={() => router.push("/blog")}>
                         <NavbarItem
-                            active={isActive("/blog", "")}
+                            active={inBlog()}
                             className="flex items-center gap-2 hover:fill-red-200"
                         >
                             Blog

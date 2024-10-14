@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Code from "@/app/assets/icons/code.svg";
 import Lock from "@/app/assets/icons/lock.svg";
@@ -70,20 +72,14 @@ export default function Services() {
 
             <div className="container relative mx-auto flex flex-col items-center justify-start space-y-8 overflow-hidden pb-48 pt-24">
                 {/* header start */}
-                <div className="flex flex-col items-center">
-                    <p className="relative bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 text-center font-semibold tracking-wider text-transparent">
+                <div className="flex flex-col items-center text-center">
+                    <p className="relative bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 font-semibold tracking-wider text-transparent">
                         Solutions
                     </p>
-                    <h2
-                        className="pb-4 text-center text-5xl text-white"
-                        id="header"
-                    >
+                    <h2 className="pb-4 text-5xl text-white">
                         Your partner in the web3 world
                     </h2>
-                    <p
-                        className="max-w-md pb-10 text-center text-neutral-500"
-                        id="subheader"
-                    >
+                    <p className="max-w-md pb-10 text-neutral-500">
                         We offer everything you need from start to finish for
                         your blockchain product
                     </p>
