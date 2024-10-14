@@ -244,16 +244,13 @@ export default function MobileNavbar({
                             height={100}
                             className="h-16 w-16"
                         />
-                        <a className="cursor-pointer pr-6 text-xl text-white">
-                            Rezolv
-                        </a>
                     </div>
-                    <div className="flex gap-6">
-                        <button className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200">
+                    <div className="flex gap-4">
+                        <button className="h-10 w-fit cursor-pointer rounded-lg bg-white px-6 py-1.5 text-sm text-black hover:bg-neutral-200">
                             Contact us
                         </button>
                         <div
-                            className="rounded-lg border p-1"
+                            className="flex h-10 w-10 items-center justify-center rounded-lg border p-1"
                             onClick={handleMenu}
                         >
                             <Menu />
