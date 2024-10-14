@@ -170,7 +170,10 @@ export default function MobileNavbar({
                 >
                     <div
                         className="flex cursor-pointer items-center pt-10"
-                        onClick={() => router.push("/")}
+                        onClick={() => {
+                            router.push("/");
+                            closeAnimation();
+                        }}
                         id="mobile_nav_logo"
                     >
                         <Image
