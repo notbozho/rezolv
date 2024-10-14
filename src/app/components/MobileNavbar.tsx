@@ -198,7 +198,10 @@ export default function MobileNavbar({
                             </NavbarItem>
                         </div>
                         <div
-                            onClick={() => router.push("/#testimonials")}
+                            onClick={() => {
+                                router.push("/#testimonials");
+                                closeAnimation();
+                            }}
                             id="mobile_nav_item"
                         >
                             <NavbarItem active={isActive("/", "testimonials")}>
@@ -217,7 +220,10 @@ export default function MobileNavbar({
                         <NavbarItem id="mobile_nav_item">About us</NavbarItem>
                         <div
                             id="mobile_nav_item"
-                            onClick={() => router.push("/#faq")}
+                            onClick={() => {
+                                router.push("/#faq");
+                                closeAnimation();
+                            }}
                         >
                             <NavbarItem active={isActive("/", "faq")}>
                                 FAQs
