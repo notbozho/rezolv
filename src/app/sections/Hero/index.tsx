@@ -8,16 +8,19 @@ export default function Hero() {
     useEffect(() => {
         const tlBG = gsap.timeline();
 
-        tlBG.from("#bg", {
+        tlBG.set("#bg", {
             opacity: 0,
-            y: 80,
-            ease: "circ.inOut",
-        }).to("#bg", {
-            opacity: 1,
-            duration: 1,
-            y: 0,
-            ease: "circ.inOut",
-        });
+            y: 60,
+        })
+            .to("#bg", {
+                opacity: 1,
+                duration: 0.5,
+                y: 0,
+            })
+            .to("#bg_gradient", {
+                opacity: 1,
+                duration: 0.5,
+            });
 
         const tlHeader = gsap.timeline();
 
@@ -86,7 +89,7 @@ export default function Hero() {
         <section className="relative flex h-screen w-full flex-col justify-evenly">
             <div
                 className="absolute -z-30 h-full w-full bg-gradient-to-tr from-neutral-800 via-black via-40% to-neutral-900 opacity-0"
-                id="bg"
+                id="bg_gradient"
             ></div>
             <div className="absolute -left-1 -top-1 right-0 opacity-0" id="bg">
                 <Grid />
@@ -115,11 +118,8 @@ export default function Hero() {
                     kur do koleno
                 </button>
             </div>
-            <div
-                className="mx-auto flex items-center justify-center gap-[4vw] self-end py-2 opacity-0 lg:py-0"
-                id="stats"
-            >
-                <div className="flex flex-col items-center space-y-2">
+            <div className="flex" id="stats">
+                <div className="">
                     <p
                         className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"
@@ -130,8 +130,7 @@ export default function Hero() {
                         Audits
                     </p>
                 </div>
-                <hr className="h-24 border-r border-neutral-800" />
-                <div className="flex flex-col items-center space-y-2">
+                <div className="">
                     <p
                         className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"
@@ -142,8 +141,7 @@ export default function Hero() {
                         nSLOC audited
                     </p>
                 </div>
-                <hr className="h-24 border-r border-neutral-800" />
-                <div className="flex flex-col items-center space-y-2">
+                <div className="">
                     <p
                         className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"
@@ -154,8 +152,7 @@ export default function Hero() {
                         Criticals Found
                     </p>
                 </div>
-                <hr className="h-24 border-r border-neutral-800" />
-                <div className="flex flex-col items-center space-y-2">
+                <div className="">
                     <p
                         className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"

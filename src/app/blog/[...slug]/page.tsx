@@ -6,8 +6,64 @@ import { Mdx } from "@/app/components/mdx/MdxComponents";
 import Image from "next/image";
 import { compareDesc } from "date-fns";
 import PostCard from "../PostCard";
-
+import { Metadata } from "next";
+import { APP_URL } from "@/app/consts";
 // generate metadata for this page
+
+interface PageProps {
+    params: {
+        slug: string[];
+    };
+}
+
+async function getPostFromParams(params) {
+    const post = allPosts.find(
+        (post) => post.permalink === decodeURIComponent(params.slug.join("/")),
+    );
+
+    if (!post) {
+        return null;
+    }
+
+    return post;
+}
+
+export async function generateMetadata({
+    params,
+}: PageProps): Promise<Metadata> {
+    const post = await getPostFromParams(params);
+
+    if (!post) {
+        return {};
+    }
+
+    const url = APP_URL;
+
+    return {
+        title: post.title,
+        description: post.description,
+        openGraph: {
+            title: post.title,
+            description: post.description,
+            url: `${url}/blog/${post.slug}`,
+            type: "article",
+            images: [
+                {
+                    url: `${url}/api/og?slug=${post.slug}`,
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "Rezolv Solutions",
+            description: "Expert web3 development & security",
+            images: [`${url}/api/og?slug=${post.slug}`],
+        },
+    };
+}
 
 export default function Post({ params }: { params: { slug: string[] } }) {
     const post = allPosts.find(

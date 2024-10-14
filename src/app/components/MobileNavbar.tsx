@@ -254,7 +254,7 @@ export default function MobileNavbar({
                             className="h-16 w-16"
                         />
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex flex-shrink-0 gap-4">
                         <button className="h-10 w-fit cursor-pointer rounded-lg bg-white px-6 py-1.5 text-sm text-black hover:bg-neutral-200">
                             Contact us
                         </button>

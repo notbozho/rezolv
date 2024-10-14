@@ -1,5 +1,5 @@
 [data-rehype-pretty-code-figure] pre {
-    @apply px-0;
+    @apply bg-neutral-900 px-0 !important;
 }
 
 [data-rehype-pretty-code-figure] code {
@@ -32,4 +32,9 @@
 
 [data-rehype-pretty-code-figure] [data-chars-id] {
     @apply border-b-2 p-1 shadow-none;
+}
+
+[data-rehype-pretty-code-figure] [data-chars-id]::before {
+    content: attr(data-chars-id);
+    @apply text-xs text-gray-500;
 }
