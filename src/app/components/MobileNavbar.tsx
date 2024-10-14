@@ -48,6 +48,8 @@ export default function MobileNavbar({
             observer.observe(section);
         });
 
+        closeAnimation();
+
         return () => {
             sections.forEach((section) => {
                 observer.unobserve(section);
@@ -64,8 +66,6 @@ export default function MobileNavbar({
             closeAnimation();
         }
     };
-
-    useEffect(() => {}, [isOpen]);
 
     const openAnimation = () => {
         const tl = gsap.timeline();
