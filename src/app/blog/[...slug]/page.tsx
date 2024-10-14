@@ -54,15 +54,17 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                 </div>
             </div>
             {/* more */}
-            <div className="flex w-full flex-col border-t border-red-900 p-10">
+            <div className="flex w-full flex-col border-t border-red-900 p-2 pb-10 pt-4 md:p-10">
                 <div className="container mx-auto space-y-8">
                     <div className="flex w-full justify-between">
-                        <h2 className="text-4xl">Discover more articles</h2>
-                        <button className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200">
+                        <h2 className="text-2xl md:text-4xl">
+                            Discover more articles
+                        </h2>
+                        <button className="hidden cursor-pointer rounded-lg bg-white px-6 py-1.5 text-sm text-black hover:bg-neutral-200 md:block md:text-base">
                             View All
                         </button>
                     </div>
-                    <div className="mx-auto grid gap-6 px-2 pb-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="mx-auto grid gap-6 px-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         {otherPosts.map((post, index) => (
                             <PostCard
                                 key={post.slug}
@@ -71,6 +73,9 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                             />
                         ))}
                     </div>
+                    <button className="block w-full cursor-pointer rounded-lg bg-white px-6 py-1.5 text-sm text-black hover:bg-neutral-200 md:hidden md:text-base">
+                        View All
+                    </button>
                 </div>
             </div>
         </section>

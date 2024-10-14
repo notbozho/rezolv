@@ -6,24 +6,31 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import clsx from "clsx";
+import { cn } from "../utils";
 
-const NavbarItem = ({
+export const NavbarItem = ({
     children,
     active = false,
     className = "",
+    id = "",
 }: Readonly<{
     children: React.ReactNode;
     active?: boolean;
     className?: string;
+    id?: string;
 }>) => (
-    <a
-        className={`relative cursor-pointer ${clsx(active && "font-medium text-white")} transition-all duration-500 ease-in-out hover:text-red-200 ${className}`}
+    <p
+        className={cn(
+            `relative cursor-pointer ${clsx(active && "font-medium text-white")} transition-all duration-500 ease-in-out hover:text-red-200`,
+            className,
+        )}
+        id={id}
     >
         {children}
-    </a>
+    </p>
 );
 
-export default function Navbar() {
+export default function Navbar({ className = "" }: { className?: string }) {
     const router = useRouter();
     const pathname = usePathname();
     const [activeSection, setActiveSection] = useState("");
@@ -83,7 +90,10 @@ export default function Navbar() {
 
     return (
         <div
-            className="backdrop-blur-[1px], fixed left-0 right-0 top-0 z-50 bg-gradient-to-b from-neutral-950/80 opacity-0"
+            className={cn(
+                `backdrop-blur-[1px], fixed left-0 right-0 top-0 z-50 bg-gradient-to-b from-neutral-950/80 opacity-0`,
+                className,
+            )}
             id="navbar"
         >
             <div className="container mx-auto flex items-center justify-between py-6">
