@@ -103,7 +103,7 @@ export default function Hero() {
                     with expert development and security reviews
                 </h1>
                 <p
-                    className="max-w-[90%] text-center text-neutral-500 opacity-0 sm:text-base lg:max-w-screen-lg lg:pb-10"
+                    className="max-w-[90%] text-center text-neutral-400 opacity-0 sm:text-base lg:max-w-screen-lg lg:pb-10"
                     id="subheader"
                 >
                     Ipos sum dolor sit amet, consectetur adipiscing elit. Lorem

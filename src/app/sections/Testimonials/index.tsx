@@ -86,7 +86,7 @@ export default function Testimonials() {
                     <h2 className="pb-4 text-4xl text-white md:text-5xl">
                         Our work through their words
                     </h2>
-                    <p className="pb-10 text-neutral-500 lg:max-w-md">
+                    <p className="pb-10 text-neutral-400 lg:max-w-md">
                         Find out why we are trusted by so many
                     </p>
                 </div>

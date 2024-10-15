@@ -79,7 +79,7 @@ export default function Services() {
                     <h2 className="pb-4 text-5xl text-white">
                         Your partner in the web3 world
                     </h2>
-                    <p className="pb-10 text-neutral-500 lg:max-w-md">
+                    <p className="pb-10 text-neutral-400 lg:max-w-md">
                         We offer everything you need from start to finish for
                         your blockchain product
                     </p>

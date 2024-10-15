@@ -35,7 +35,7 @@ export default function BlogPage() {
                         >
                             Latest blog posts
                         </h1>
-                        <p className="max-w-lg text-neutral-400" id="subheader">
+                        <p className="max-w-lg text-neutral-500" id="subheader">
                             Exploring topics we think are cool and worth a read
                         </p>
                     </div>

@@ -98,7 +98,7 @@ export default function FAQ() {
                     <h2 className="pb-4 text-4xl text-white md:text-5xl">
                         Your Questions, Answered
                     </h2>
-                    <p className="pb-10 text-neutral-500 lg:max-w-md lg:self-end">
+                    <p className="pb-10 text-neutral-400 lg:max-w-md lg:self-end">
                         Everything you need to know, in one place
                     </p>
                 </div>
