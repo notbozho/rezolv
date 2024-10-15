@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Grid from "../../components/ui/Grid";
+import Grid from "@/app/components/ui/Grid";
 
 import { compareDesc } from "date-fns";
 import { posts as allPosts } from "#site/content";
