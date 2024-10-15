@@ -88,18 +88,17 @@ export default function Services() {
                 <div className="flex h-full w-full flex-col items-center justify-between gap-8 px-8 lg:h-56 lg:flex-row">
                     <Item
                         header="Development"
-                        description="prodavame pupeshi"
+                        description="prodavame pupeshi prodavame pupeshi prodavame pupeshi prodavame pupeshi"
                         Icon={Code}
                     />{" "}
                     <Item
                         header="Security Review"
-                        description="prodavame pupeshi"
+                        description="prodavame pupeshi prodavame pupeshi prodavame pupeshi"
                         Icon={Lock}
-                        iconPadding="p-3"
                     />{" "}
                     <Item
                         header="Protocol Monitoring"
-                        description="prodavame pupeshi"
+                        description="prodavame pupeshi prodavame pupeshi"
                         Icon={Monitor}
                     />
                 </div>

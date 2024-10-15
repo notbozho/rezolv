@@ -8,12 +8,10 @@ export default function Item({
     header,
     description,
     Icon,
-    iconPadding = "p-2",
 }: Readonly<{
     header: string;
     description: string;
     Icon: any;
-    iconPadding?: string;
 }>) {
     const itemRef = useRef<HTMLDivElement | null>(null);
     const gradientRef = useRef<HTMLDivElement | null>(null);
@@ -71,7 +69,7 @@ export default function Item({
             onMouseLeave={handleMouseLeave}
         >
             <div
-                className={`flex h-12 w-12 items-center justify-center self-start rounded-lg bg-neutral-900/50 shadow-md shadow-neutral-900 ${iconPadding}`}
+                className={`flex h-12 w-12 items-center justify-center self-start rounded-lg bg-neutral-900/50 p-2 shadow-md shadow-neutral-900`}
             >
                 <Icon className="text-white" />
             </div>
@@ -82,11 +80,6 @@ export default function Item({
                 <p className="font-light text-neutral-400">{description}</p>
             </div>
 
-            {/* <div
-                className={`absolute w-64 h-64 -right-32 ${iconPadding} flex justify-center z-10 items-center `}
-            >
-                <Icon className="invert" style={{ mixBlendMode: "screen" }} />
-            </div> */}
             {/* Gradient circle  */}
             <div
                 ref={gradientRef}
