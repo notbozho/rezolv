@@ -73,7 +73,7 @@ export default function Item({
             <div
                 className={`flex h-12 w-12 items-center justify-center self-start rounded-lg bg-neutral-900/50 shadow-md shadow-neutral-900 ${iconPadding}`}
             >
-                <Icon className="invert" />
+                <Icon className="text-white" />
             </div>
             <div className="flex flex-col pl-4 lg:pl-0">
                 <p className="text-2xl font-medium text-white lg:text-3xl">
