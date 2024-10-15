@@ -156,6 +156,15 @@ export default function MobileNavbar({
         });
     };
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add("no-scroll");
+            openAnimation();
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+    }, [isOpen]);
+
     return (
         <div
             className={cn(

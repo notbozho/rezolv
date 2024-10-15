@@ -86,7 +86,7 @@ export default function Testimonials() {
                     <h2 className="pb-4 text-4xl text-white md:text-5xl">
                         Our work through their words
                     </h2>
-                    <p className="pb-10 text-neutral-500 md:max-w-md">
+                    <p className="pb-10 text-neutral-500 lg:max-w-md">
                         Find out why we are trusted by so many
                     </p>
                 </div>
@@ -103,11 +103,11 @@ export default function Testimonials() {
                         >
                             {testimonials.map((testimonial, index) => (
                                 <div key={index} className="embla__slide pl-4">
-                                    <div className="embla__slide__number flex min-h-[26rem] w-[32rem] min-w-0 select-none flex-col items-start justify-between space-y-6 rounded-lg bg-neutral-900/50 p-4 backdrop-blur-md">
+                                    <div className="embla__slide__number flex min-h-[30rem] w-[20rem] min-w-0 select-none flex-col items-start justify-between space-y-6 rounded-lg bg-neutral-900/50 p-4 backdrop-blur-md lg:w-[32rem]">
                                         <div className="flex h-6 w-6 items-center justify-center self-start">
                                             <Quote className="text-red-700/80" />
                                         </div>
-                                        <p className="pl-4 text-lg text-neutral-300">
+                                        <p className="text-base text-neutral-300 lg:pl-4 lg:text-lg">
                                             {testimonial.quote}
                                         </p>
                                         <div className="flex flex-wrap items-center gap-4">

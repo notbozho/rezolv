@@ -65,7 +65,7 @@ export default function Item({
     return (
         <div
             ref={itemRef}
-            className="relative flex h-full w-full cursor-pointer flex-col justify-between overflow-hidden rounded-lg border border-neutral-800 bg-gradient-to-t from-black/20 to-neutral-800/30 p-5 backdrop-blur-sm transition-all duration-300 hover:border-red-900/50"
+            className="relative flex h-full w-full cursor-pointer flex-row justify-start overflow-hidden rounded-lg border border-neutral-800 bg-gradient-to-t from-black/20 to-neutral-800/30 p-5 backdrop-blur-sm transition-all duration-300 hover:border-red-900/50 lg:flex-col lg:justify-between"
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -75,8 +75,10 @@ export default function Item({
             >
                 <Icon className="invert" />
             </div>
-            <div className="flex flex-col">
-                <p className="text-3xl font-medium text-white">{header}</p>
+            <div className="flex flex-col pl-4 lg:pl-0">
+                <p className="text-2xl font-medium text-white lg:text-3xl">
+                    {header}
+                </p>
                 <p className="font-light text-neutral-400">{description}</p>
             </div>
 

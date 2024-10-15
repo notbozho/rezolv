@@ -49,9 +49,9 @@ export default function FAQ() {
                 className="absolute inset-0 -z-50 w-full bg-gradient-to-br from-neutral-900 via-black to-neutral-950 opacity-0"
                 id="bg"
             ></div>
-            <div className="container mx-auto flex flex-col items-start justify-start space-y-8 overflow-hidden lg:flex-row">
+            <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-5 space-y-8 overflow-hidden lg:flex-row lg:items-start lg:justify-start lg:gap-0">
                 {/* questions start */}
-                <div className="flex w-1/2 flex-col gap-5 rounded-lg">
+                <div className="flex w-[90%] flex-col gap-5 rounded-lg lg:w-1/2">
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
@@ -98,7 +98,7 @@ export default function FAQ() {
                     <h2 className="pb-4 text-4xl text-white md:text-5xl">
                         Your Questions, Answered
                     </h2>
-                    <p className="self-end pb-10 text-neutral-500 md:max-w-md">
+                    <p className="pb-10 text-neutral-500 lg:max-w-md lg:self-end">
                         Everything you need to know, in one place
                     </p>
                 </div>

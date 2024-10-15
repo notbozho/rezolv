@@ -96,14 +96,14 @@ export default function Hero() {
             </div>
             <div className="container relative mx-auto flex flex-col items-center justify-center space-y-8 overflow-hidden">
                 <h1
-                    className="pt-32 text-center text-2xl font-light text-white opacity-0 sm:text-3xl md:text-6xl"
+                    className="pt-32 text-center text-3xl font-light text-white opacity-0 md:text-6xl"
                     id="header"
                 >
                     Elevate your smart contracts <br />
                     with expert development and security reviews
                 </h1>
                 <p
-                    className="max-w-[400px] pb-10 text-center text-xs text-neutral-500 opacity-0 sm:text-base lg:max-w-screen-lg"
+                    className="max-w-[90%] text-center text-neutral-500 opacity-0 sm:text-base lg:max-w-screen-lg lg:pb-10"
                     id="subheader"
                 >
                     Ipos sum dolor sit amet, consectetur adipiscing elit. Lorem

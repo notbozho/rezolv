@@ -79,13 +79,13 @@ export default function Services() {
                     <h2 className="pb-4 text-5xl text-white">
                         Your partner in the web3 world
                     </h2>
-                    <p className="max-w-md pb-10 text-neutral-500">
+                    <p className="pb-10 text-neutral-500 lg:max-w-md">
                         We offer everything you need from start to finish for
                         your blockchain product
                     </p>
                 </div>
                 {/* header end */}
-                <div className="flex h-56 w-full items-center justify-between gap-8 px-8">
+                <div className="flex h-full w-full flex-col items-center justify-between gap-8 px-8 lg:h-56 lg:flex-row">
                     <Item
                         header="Development"
                         description="prodavame pupeshi"
