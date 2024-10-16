@@ -5,7 +5,7 @@ import Lock from "@/app/assets/icons/lock.svg";
 import Process from "@/app/sections/Process";
 import QuoteSection from "@/app/sections/Quote";
 
-export default function DevelopmentPage() {
+export default function SecurityPage() {
     return (
         <>
             <section className="relative flex h-[80vh] w-full flex-col justify-evenly">
@@ -18,11 +18,11 @@ export default function DevelopmentPage() {
                         Deploy with confidence
                     </p> */}
                     <h1 className="pb-4 text-center text-4xl font-light text-white md:text-6xl">
-                        Smart contract development
+                        Security reviews
                     </h1>
                     <p className="max-w-[90%] pb-10 text-center text-base text-neutral-400 sm:text-lg lg:max-w-screen-lg">
-                        Building secure, scalable, and efficient smart contracts
-                        for the future of DeFi.
+                        Keep your blockchain project safe with our expert smart
+                        contract auditing.
                     </p>
                     <button
                         className="cursor-pointer rounded-lg bg-white px-14 py-2 text-lg text-black"

@@ -42,16 +42,16 @@ export const DropdownItem = ({
     href: string;
     src: string;
 }) => (
-    <Link href={href} className="group relative flex w-fit">
+    <Link href={href} className="group relative flex">
         <Image
             src={src}
             alt={title}
             width={140}
             height={70}
-            className="h-96 w-[18rem] rounded-lg object-cover mix-blend-multiply grayscale filter transition-all duration-300 group-hover:grayscale-0 group-hover:filter"
+            className="h-80 w-[16rem] rounded-lg object-cover mix-blend-multiply grayscale filter transition-all duration-300 group-hover:grayscale-0 group-hover:filter"
         />
-        <div className="absolute h-full w-full rounded-lg bg-gradient-to-t from-black/50 from-30% to-transparent"></div>
-        <div className="absolute bottom-0 left-0 p-4">
+        <div className="absolute h-full w-full rounded-lg bg-gradient-to-t from-black/60 from-30% to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full p-4">
             <h4 className="mb-1 text-2xl font-medium text-white">{title}</h4>
             <p className="max-w-[10rem] text-neutral-400">{description}</p>
         </div>
@@ -118,7 +118,26 @@ export default function Navbar({ className = "" }: { className?: string }) {
         };
     }, [pathname]);
 
+    const closeAnimation = () => {
+        const tl = gsap.timeline();
+
+        tl.to("#dropdown", {
+            opacity: 0,
+            scale: 0.85,
+            y: -20,
+            duration: 0.2,
+            ease: "power2.out",
+            onComplete: () => setDropdown(false),
+        });
+
+        return () => {
+            tl.kill();
+        };
+    };
+
     useEffect(() => {
+        if (!dropdown) return;
+
         const tl = gsap.timeline();
 
         tl.set("#dropdown", {
@@ -132,7 +151,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
             scale: 1,
             y: 0,
             duration: 0.5,
-            ease: "bounce.out(1.7)",
+            ease: "power2.out",
         });
 
         return () => {
@@ -143,11 +162,11 @@ export default function Navbar({ className = "" }: { className?: string }) {
     return (
         <nav
             className={cn(
-                `backdrop-blur-[1px], fixed left-0 right-0 top-0 z-50 bg-gradient-to-b from-neutral-950/80 opacity-0`,
+                `backdrop-blur-[2px], fixed left-0 right-0 top-0 z-50 bg-gradient-to-b from-neutral-950/90 opacity-0`,
                 className,
             )}
             id="navbar"
-            onMouseLeave={() => setDropdown(false)}
+            onMouseLeave={() => closeAnimation()}
         >
             <div className="container mx-auto flex items-center justify-between py-6">
                 <div className="flex items-center space-x-8 text-base text-neutral-300">
@@ -173,27 +192,27 @@ export default function Navbar({ className = "" }: { className?: string }) {
                         <NavbarItem>Solutions</NavbarItem>
                         {dropdown && (
                             <div
-                                className="absolute left-1/2 top-[calc(100%_+_1.2rem)] -translate-x-1/2 transform pt-4"
+                                className="absolute -left-8 pt-4"
                                 id="dropdown"
                             >
                                 <div className="rounded-lg border border-neutral-800 bg-neutral-900/20 shadow-lg backdrop-blur-md transition-all duration-300">
-                                    <div className="flex h-full w-max p-4">
+                                    <div className="flex h-full w-max gap-4 p-4">
                                         <DropdownItem
                                             title="Development"
                                             description="Build your web3 protocol from scratch"
-                                            href="/solutions/development"
+                                            href="/development"
                                             src="/assets/services/development.png"
                                         />
                                         <DropdownItem
                                             title="Security Reviews"
                                             description="Ensure your smart contracts are secure"
-                                            href="/solutions/security"
+                                            href="/security"
                                             src="/assets/services/security.png"
                                         />
                                         <DropdownItem
                                             title="Protocol Monitoring"
                                             description="Your protocol, monitored 24/7"
-                                            href="/solutions/monitoring"
+                                            href="/monitoring"
                                             src="/assets/services/monitor.png"
                                         />
                                     </div>
@@ -215,11 +234,21 @@ export default function Navbar({ className = "" }: { className?: string }) {
                             Testimonials
                         </NavbarItem>
                     </div>
-                    <NavbarItem className="flex items-center gap-2 hover:fill-red-200">
-                        Portfolio
-                        <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
-                    </NavbarItem>
-                    <NavbarItem>About us</NavbarItem>
+                    <div
+                        onClick={() =>
+                            router.push(
+                                "https://github.com/RezolvSolutions/Audits",
+                            )
+                        }
+                    >
+                        <NavbarItem className="flex items-center gap-2 hover:fill-red-200">
+                            Portfolio
+                            <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
+                        </NavbarItem>
+                    </div>
+                    <div onClick={() => router.push("/#aboutus")}>
+                        <NavbarItem>About us</NavbarItem>
+                    </div>
                     <div onClick={() => router.push("/#faq")}>
                         <NavbarItem active={isActive("/", "faq")}>
                             FAQs
@@ -227,7 +256,10 @@ export default function Navbar({ className = "" }: { className?: string }) {
                     </div>
                 </div>
 
-                <button className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200">
+                <button
+                    onClick={() => router.push("https://t.me/maslarovk")}
+                    className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200"
+                >
                     Contact us
                 </button>
             </div>

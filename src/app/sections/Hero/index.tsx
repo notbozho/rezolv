@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Grid from "@/app/components/ui/Grid";
 import { gsap } from "gsap";
+import AnimatedNumber from "@/app/components/AnimatedNumber";
 
 export default function Hero() {
     useEffect(() => {
@@ -86,7 +87,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative flex h-screen w-full flex-col justify-evenly">
+        <section className="relative flex h-screen w-full flex-col items-center justify-evenly">
             <div
                 className="absolute -z-30 h-full w-full bg-gradient-to-tr from-neutral-800 via-black via-40% to-neutral-900 opacity-0"
                 id="bg_gradient"
@@ -115,50 +116,56 @@ export default function Hero() {
                     className="cursor-pointer rounded-lg bg-white px-14 py-2 text-lg text-black opacity-0"
                     id="btn"
                 >
-                    kur do koleno
+                    Contact us
                 </button>
             </div>
-            <div className="flex" id="stats">
+            <div
+                className="grid max-w-[80%] grid-cols-2 gap-4 text-center text-white opacity-0 lg:max-w-[40%] lg:grid-cols-4"
+                id="stats"
+            >
                 <div className="">
-                    <p
+                    {/* <p
                         className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"
                     >
                         7
-                    </p>
+                    </p> */}
+                    <AnimatedNumber
+                        endValue={7}
+                        delay={2}
+                        className="text-3xl font-medium text-white lg:text-5xl"
+                    />
                     <p className="text-sm font-light text-neutral-500 lg:text-base">
                         Audits
                     </p>
                 </div>
                 <div className="">
-                    <p
+                    <AnimatedNumber
+                        endValue={12}
+                        delay={2}
+                        suffix="K"
                         className="text-3xl font-medium text-white lg:text-5xl"
-                        id="stat-value"
-                    >
-                        12k
-                    </p>
+                    />
                     <p className="text-sm font-light text-neutral-500 lg:text-base">
                         nSLOC audited
                     </p>
                 </div>
                 <div className="">
-                    <p
+                    <AnimatedNumber
+                        endValue={6}
+                        delay={2}
                         className="text-3xl font-medium text-white lg:text-5xl"
-                        id="stat-value"
-                    >
-                        6
-                    </p>
+                    />
                     <p className="text-sm font-light text-neutral-500 lg:text-base">
                         Criticals Found
                     </p>
                 </div>
                 <div className="">
-                    <p
+                    <AnimatedNumber
+                        endValue={34}
+                        delay={2}
                         className="text-3xl font-medium text-white lg:text-5xl"
-                        id="stat-value"
-                    >
-                        34
-                    </p>
+                    />
                     <p className="text-sm font-light text-neutral-500 lg:text-base">
                         Highs/Mediums Found
                     </p>

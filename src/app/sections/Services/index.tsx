@@ -6,65 +6,10 @@ import Lock from "@/app/assets/icons/lock.svg";
 import Monitor from "@/app/assets/icons/monitor.svg";
 import Item from "./Item";
 import Blur from "@/app/components/ui/Blur";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
-    // useEffect(() => {
-    //     const tlBG = gsap.timeline();
-
-    //     tlBG.from("#bg", {
-    //         opacity: 0,
-    //         y: 80,
-    //         ease: "circ.inOut",
-    //     }).to("#bg", {
-    //         opacity: 1,
-    //         duration: 1,
-    //         y: 0,
-    //         ease: "circ.inOut",
-    //     });
-
-    //     // const tl = gsap.timeline({
-    //     //     scrollTrigger: {
-    //     //         trigger: "#header",
-    //     //         start: "bottom bottom",
-    //     //         end: "top 30%",
-    //     //     },
-    //     // });
-
-    //     // tl.from("#header", {
-    //     //     opacity: 0,
-    //     //     duration: 0.7,
-    //     //     y: 20,
-    //     //     ease: "expo.inOut",
-    //     // })
-    //     //     .to("#header", {
-    //     //         opacity: 1,
-    //     //         duration: 1.7,
-    //     //         y: 0,
-    //     //         ease: "expo.inOut",
-    //     //     })
-    //     //     .to(
-    //     //         "#bg-circle",
-    //     //         {
-    //     //             opacity: 1,
-    //     //             delay: 0.5,
-    //     //             duration: 1.5,
-    //     //             ease: "circ.inOut",
-    //     //         },
-    //     //         "<",
-    //     //     );
-
-    //     return () => {
-    //         tlBG.kill();
-    //         // tl.kill();
-    //     };
-    // }, []);
-
     return (
-        <section className="relative w-full" id="service_section">
+        <section className="relative w-full" id="solutions">
             <div
                 className="absolute inset-0 -z-50 w-full bg-gradient-to-br from-neutral-800 via-black via-40% to-neutral-950 opacity-0"
                 id="bg"

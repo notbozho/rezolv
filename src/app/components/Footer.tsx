@@ -1,100 +1,85 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Arrow from "@/app/assets/icons/arrow-right.svg";
+import Telegram from "@/app/assets/icons/telegram.svg";
+import GitHub from "@/app/assets/icons/github.svg";
+import X from "@/app/assets/icons/x.svg";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+    const router = useRouter();
+
     return (
         <footer className="w-full">
             <div className="mx-auto border-t border-neutral-800 bg-gradient-to-b from-black to-neutral-950">
-                <div className="container mx-auto flex flex-col-reverse items-center justify-between py-10 align-middle md:flex-row">
-                    <div className="z-20 flex flex-col items-center pt-10 md:items-start md:pt-0">
+                <div className="container mx-auto flex flex-col items-center justify-center py-10 text-center align-middle">
+                    <div className="z-20 flex items-center pb-4">
                         <Image
                             src="/assets/logo.png"
                             alt="Rezolv logo"
-                            width={100}
-                            height={100}
-                            className="md:-ml-4"
+                            width={80}
+                            height={80}
+                            // className="md:-ml-4"
                         />
                         <h1 className="text-3xl font-medium text-white">
                             Rezolv
                         </h1>
-                        <p className="text-neutral-400">
-                            prodavame pupeshi dini, i smart contracti
+                    </div>
+                    <div className="flex flex-wrap items-center justify-center text-center lg:flex-nowrap lg:space-x-8">
+                        <p
+                            onClick={() => router.push("/#solutions")}
+                            className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
+                        >
+                            Solutions
+                        </p>
+                        <p
+                            onClick={() => router.push("/blog")}
+                            className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
+                        >
+                            Blog
+                        </p>
+                        <p
+                            onClick={() => router.push("/#testimonials")}
+                            className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
+                        >
+                            Testimonials
+                        </p>
+                        <p
+                            onClick={() =>
+                                router.push(
+                                    "https://github.com/RezolvSolutions/Audits",
+                                )
+                            }
+                            className="flex basis-1/2 cursor-pointer items-center justify-center gap-2 transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
+                        >
+                            Portfolio
+                            <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
+                        </p>
+                        <p
+                            onClick={() => router.push("/#aboutus")}
+                            className="basis-1/2 cursor-pointer text-nowrap transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
+                        >
+                            About us
+                        </p>
+                        <p
+                            onClick={() => router.push("/#faq")}
+                            className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
+                        >
+                            FAQs
                         </p>
                     </div>
-                    <div className="flex space-x-20">
-                        <div className="space-y-5">
-                            <p className="text-center text-xl text-white md:text-start">
-                                {" "}
-                                Socials
-                            </p>
-                            <ul className="flex flex-col items-center text-gray-400 md:items-start">
-                                <li>
-                                    <a
-                                        href="https://x.com/rezolv_sol"
-                                        className="relative flex cursor-pointer gap-2 py-0.5 underline-offset-4 hover:underline"
-                                    >
-                                        X (Twitter)
-                                        <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80 hover:fill-red-200" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://t.me/maslarovk"
-                                        className="relative flex cursor-pointer gap-2 py-0.5 underline-offset-4 hover:underline"
-                                    >
-                                        Telegram
-                                        <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80 hover:fill-red-200" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://github.com/RezolvSolutions/Audits"
-                                        className="relative flex cursor-pointer gap-2 py-0.5 underline-offset-4 hover:underline"
-                                    >
-                                        GitHub
-                                        <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80 hover:fill-red-200" />
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="space-y-5">
-                            <p className="text-center text-xl text-white md:text-start">
-                                Home
-                            </p>
-                            <nav className="flex flex-col items-center text-gray-400 md:items-center">
-                                <a
-                                    href="#"
-                                    className="relative flex cursor-pointer py-0.5 underline-offset-4 hover:underline"
-                                >
-                                    Process
-                                </a>
-                                <a
-                                    href="#"
-                                    className="relative flex cursor-pointer py-0.5 underline-offset-4 hover:underline"
-                                >
-                                    Services
-                                </a>
-                                <a
-                                    href="https://github.com/RezolvSolutions/Audits"
-                                    className="relative flex cursor-pointer py-0.5 underline-offset-4 hover:underline"
-                                >
-                                    Portfolio
-                                </a>
-                                <a
-                                    href="#"
-                                    className="relative flex cursor-pointer py-0.5 underline-offset-4 hover:underline"
-                                >
-                                    FAQ
-                                </a>
-                            </nav>
-                        </div>
-                    </div>
                 </div>
-                <div className="flex items-center justify-center border-t border-neutral-900 py-6">
+                <div className="container mx-auto flex flex-col-reverse items-center justify-between gap-4 border-t border-neutral-900 py-6 lg:flex-row lg:gap-0">
                     <span className="text-gray-500">
                         © 2024 Rezolv Solutions All Rights Reserved
                     </span>
+                    <div className="flex gap-6">
+                        <Telegram className="h-7 w-6 cursor-pointer text-white hover:text-red-400" />
+                        <GitHub className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
+                        <X className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
+                    </div>
                 </div>
             </div>
         </footer>
