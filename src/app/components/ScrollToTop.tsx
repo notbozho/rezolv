@@ -19,8 +19,7 @@ export default function ScrollToTop() {
     useEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: "#service_section",
-                start: "top 90%",
+                start: "150vh",
                 scrub: 1,
                 toggleActions: "play reverse play reverse",
             },

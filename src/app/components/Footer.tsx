@@ -12,7 +12,7 @@ export default function Footer() {
     const router = useRouter();
 
     return (
-        <footer className="w-full">
+        <footer className="z-30 w-full">
             <div className="mx-auto border-t border-neutral-800 bg-gradient-to-b from-black to-neutral-950">
                 <div className="container mx-auto flex flex-col items-center justify-center py-10 text-center align-middle">
                     <div className="z-20 flex items-center pb-4">

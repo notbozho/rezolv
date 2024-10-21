@@ -47,7 +47,7 @@ export default function FAQ() {
         <section className="relative w-full py-36" id="faq">
             <div
                 className="absolute inset-0 -z-50 w-full bg-gradient-to-br from-neutral-900 via-black to-neutral-950 opacity-0"
-                id="bg"
+                id="bg_gradient"
             ></div>
             <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-5 space-y-8 overflow-hidden lg:flex-row lg:items-start lg:justify-start lg:gap-0">
                 {/* questions start */}
@@ -67,13 +67,13 @@ export default function FAQ() {
                                         {faq.question}
                                     </p>
                                     <div
-                                        className={`${clsx(open == null || open != index ? "h-0" : "h-fit")} overflow-hidden font-light text-neutral-300`}
+                                        className={`${clsx(open == null || open != index ? "max-h-0" : "max-h-[200px]")} overflow-hidden font-light text-neutral-300 transition-all duration-500`}
                                     >
-                                        <p>{faq.answer}</p>
+                                        {faq.answer}
                                     </div>
                                 </div>
                                 <Arrow
-                                    className={`my-auto h-6 w-6 transform ${clsx(
+                                    className={`my-auto h-6 w-6 transform transition-all duration-500 ${clsx(
                                         open === null &&
                                             "rotate-90 text-neutral-300",
                                         open === index && "-rotate-90",

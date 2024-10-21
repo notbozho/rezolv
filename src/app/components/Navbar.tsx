@@ -209,12 +209,6 @@ export default function Navbar({ className = "" }: { className?: string }) {
                                             href="/security"
                                             src="/assets/services/security.png"
                                         />
-                                        <DropdownItem
-                                            title="Protocol Monitoring"
-                                            description="Your protocol, monitored 24/7"
-                                            href="/monitoring"
-                                            src="/assets/services/monitor.png"
-                                        />
                                     </div>
                                 </div>
                             </div>

@@ -12,7 +12,7 @@ export default function Services() {
         <section className="relative w-full" id="solutions">
             <div
                 className="absolute inset-0 -z-50 w-full bg-gradient-to-br from-neutral-800 via-black via-40% to-neutral-950 opacity-0"
-                id="bg"
+                id="bg_gradient"
             ></div>
 
             <div className="container relative mx-auto flex flex-col items-center justify-start space-y-8 overflow-hidden pb-48 pt-24">
@@ -35,11 +35,13 @@ export default function Services() {
                         header="Development"
                         description="prodavame pupeshi prodavame pupeshi prodavame pupeshi prodavame pupeshi"
                         Icon={Code}
+                        href="/development"
                     />{" "}
                     <Item
                         header="Security Review"
                         description="prodavame pupeshi prodavame pupeshi prodavame pupeshi"
                         Icon={Lock}
+                        href="/security"
                     />{" "}
                     <Item
                         header="Protocol Monitoring"

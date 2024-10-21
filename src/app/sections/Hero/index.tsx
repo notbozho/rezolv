@@ -18,10 +18,14 @@ export default function Hero() {
                 duration: 0.5,
                 y: 0,
             })
-            .to("#bg_gradient", {
-                opacity: 1,
-                duration: 0.5,
-            });
+            .to(
+                "#bg_gradient",
+                {
+                    opacity: 1,
+                    duration: 0.5,
+                },
+                "<0.3",
+            );
 
         const tlHeader = gsap.timeline();
 
@@ -42,12 +46,16 @@ export default function Hero() {
                 },
                 "<",
             )
-            .to("#header", {
-                opacity: 1,
-                duration: 1.7,
-                y: 0,
-                ease: "expo.inOut",
-            })
+            .to(
+                "#header",
+                {
+                    opacity: 1,
+                    duration: 1.7,
+                    y: 0,
+                    ease: "expo.inOut",
+                },
+                "<0.1",
+            )
             .to(
                 "#subheader",
                 {

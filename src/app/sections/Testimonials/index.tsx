@@ -75,7 +75,7 @@ export default function Testimonials() {
         <section className="relative w-full py-36" id="testimonials">
             <div
                 className="absolute inset-0 -z-50 w-full bg-gradient-to-tr from-neutral-900 via-black to-neutral-950 opacity-0"
-                id="bg"
+                id="bg_gradient"
             ></div>
             <div className="container mx-auto flex flex-col items-center justify-start space-y-8 overflow-hidden lg:flex-row lg:items-start">
                 {/* header start */}

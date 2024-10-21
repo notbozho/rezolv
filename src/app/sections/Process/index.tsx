@@ -108,8 +108,8 @@ export default function Process() {
     return (
         <section className="relative w-full" id="process_section">
             <div
-                className="absolute inset-0 -z-50 w-full bg-gradient-to-br from-neutral-900 via-black via-40% to-neutral-950"
-                id="bg"
+                className="absolute inset-0 -z-50 w-full bg-gradient-to-br from-neutral-900 via-black via-40% to-neutral-950 opacity-0"
+                id="bg_gradient"
             ></div>
 
             <div className="container relative mx-auto flex flex-col items-center justify-start space-y-8 overflow-hidden">

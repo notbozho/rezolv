@@ -16,10 +16,10 @@ export default function BlogPage() {
 
     return (
         <>
-            <section className="relative z-20 flex min-h-screen w-full flex-col justify-center">
+            <section className="relative flex min-h-screen w-full flex-col justify-center">
                 <div
                     className="absolute -z-30 h-full w-full bg-gradient-to-tr from-neutral-800 via-black via-40% to-neutral-900 opacity-0"
-                    id="bg"
+                    id="bg_gradient"
                 ></div>
                 <div className="absolute -left-1 -top-1 right-0 -z-10" id="bg">
                     <Grid />

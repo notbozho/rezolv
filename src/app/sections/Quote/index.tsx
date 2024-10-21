@@ -16,7 +16,8 @@ export default function QuoteSection({
     return (
         <section className="relative w-full py-36" id="quote">
             <div
-                className={`absolute inset-0 -z-50 w-full bg-gradient-to-${gradientDirection} ${gradientColors}`}
+                className={`absolute inset-0 -z-50 w-full opacity-0 bg-gradient-to-${gradientDirection} ${gradientColors}`}
+                id="bg_gradient"
             ></div>
             <div className="container mx-auto flex flex-col items-center justify-start space-y-8 overflow-hidden lg:flex-row lg:items-start">
                 {/* header start */}

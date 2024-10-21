@@ -1,16 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Lock from "@/app/assets/icons/lock.svg";
 import Process from "@/app/sections/Process";
 import QuoteSection from "@/app/sections/Quote";
+import gsap from "gsap";
 
 export default function SecurityPage() {
+    useEffect(() => {
+        const tlBG = gsap.timeline();
+
+        tlBG.set("#bg", {
+            opacity: 0,
+            y: 60,
+        })
+
+            .to("#bg_gradient", {
+                opacity: 1,
+                duration: 0.5,
+            })
+            .to("#bg_icon", {
+                opacity: 0.3,
+                duration: 0.5,
+                stagger: 0.5,
+            });
+    }, []);
     return (
         <>
             <section className="relative flex h-[80vh] w-full flex-col justify-evenly">
                 <div
-                    className="absolute -z-30 h-full w-full bg-gradient-to-tr from-neutral-900 via-black via-40% to-neutral-900"
+                    className="absolute -z-30 h-full w-full bg-gradient-to-tr from-neutral-900 via-black via-40% to-neutral-900 opacity-0"
                     id="bg_gradient"
                 ></div>
                 <div className="container relative mx-auto flex flex-col items-center justify-start gap-2">
@@ -30,10 +49,16 @@ export default function SecurityPage() {
                     >
                         kur do koleno
                     </button>
-                    <div className="absolute -bottom-40 left-2 text-white opacity-30 mix-blend-overlay blur-xl">
+                    <div
+                        id="bg_icon"
+                        className="absolute -bottom-40 left-2 text-white opacity-30 mix-blend-overlay blur-xl"
+                    >
                         <Lock className="h-96 w-96" />
                     </div>{" "}
-                    <div className="absolute bottom-20 right-2 text-white opacity-30 mix-blend-overlay blur-xl">
+                    <div
+                        id="bg_icon"
+                        className="absolute bottom-20 right-2 text-white opacity-30 mix-blend-overlay blur-xl"
+                    >
                         <Lock className="h-96 w-96" />
                     </div>
                 </div>

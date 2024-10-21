@@ -110,7 +110,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                 </div>
             </div>
             {/* more */}
-            <div className="flex w-full flex-col border-t border-red-900 p-2 pb-10 pt-4 md:p-10">
+            <div className="flex w-full flex-col border-t border-red-900 p-2 pb-10 pt-4 backdrop-blur-md md:p-10">
                 <div className="container mx-auto space-y-8">
                     <div className="flex w-full justify-between">
                         <h2 className="text-2xl md:text-4xl">
