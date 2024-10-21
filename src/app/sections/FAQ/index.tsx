@@ -62,7 +62,7 @@ export default function FAQ() {
                             <div className="flex w-full justify-between rounded-lg pb-5">
                                 <div className="flex max-w-[85%] flex-col text-lg">
                                     <p
-                                        className={`pb-4 ${clsx(open == index && "font-semibold", open !== index && "font-medium")} select-none`}
+                                        className={`pb-4 ${clsx(open == index && "font-semibold", open !== index && "font-medium")} select-none transition-all duration-500`}
                                     >
                                         {faq.question}
                                     </p>
