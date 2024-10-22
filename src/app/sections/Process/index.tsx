@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Timeline } from "@/app/components/Timeline";
 
-export default function Process() {
+export default function Process({ title, description }) {
     const content = [
         {
             title: "Initial Consultation",
@@ -118,12 +118,9 @@ export default function Process() {
                     <p className="relative bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 font-semibold tracking-wider text-transparent">
                         Our process
                     </p>
-                    <h2 className="pb-4 text-5xl text-white">
-                        Securing your project
-                    </h2>
-                    <p className="text-neutral-400 lg:max-w-md">
-                        A streamlined process designed to secure your blockchain
-                        project
+                    <h2 className="pb-4 text-5xl text-white">{title}</h2>
+                    <p className="text-neutral-400 lg:max-w-lg">
+                        {description}
                     </p>
                 </div>
                 {/* header end */}

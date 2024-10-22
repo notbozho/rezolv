@@ -7,6 +7,7 @@ import Telegram from "@/app/assets/icons/telegram.svg";
 import GitHub from "@/app/assets/icons/github.svg";
 import X from "@/app/assets/icons/x.svg";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Footer() {
     const router = useRouter();
@@ -76,9 +77,15 @@ export default function Footer() {
                         © 2024 Rezolv Solutions All Rights Reserved
                     </span>
                     <div className="flex gap-6">
-                        <Telegram className="h-7 w-6 cursor-pointer text-white hover:text-red-400" />
-                        <GitHub className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
-                        <X className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
+                        <Link href="https://t.me/maslarovk">
+                            <Telegram className="h-7 w-6 cursor-pointer text-white hover:text-red-400" />
+                        </Link>
+                        <Link href="https://github.com/RezolvSolutions/Audits">
+                            <GitHub className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
+                        </Link>
+                        <Link href="https://twitter.com/rezolv_sol">
+                            <X className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
+                        </Link>
                     </div>
                 </div>
             </div>

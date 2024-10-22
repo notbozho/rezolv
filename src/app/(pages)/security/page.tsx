@@ -63,7 +63,11 @@ export default function SecurityPage() {
                     </div>
                 </div>
             </section>
-            <Process />
+            <Process
+                title="Securing your project"
+                description="A streamlined process designed to secure
+                        your blockchain project"
+            />
             <QuoteSection
                 gradientDirection="tr"
                 gradientColors={"from-neutral-950 via-black to-neutral-950"}

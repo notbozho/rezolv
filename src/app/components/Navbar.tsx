@@ -228,18 +228,17 @@ export default function Navbar({ className = "" }: { className?: string }) {
                             Testimonials
                         </NavbarItem>
                     </div>
-                    <div
-                        onClick={() =>
-                            router.push(
-                                "https://github.com/RezolvSolutions/Audits",
-                            )
-                        }
+
+                    <Link
+                        href="
+                            https://github.com/RezolvSolutions/Audits
+                        "
                     >
                         <NavbarItem className="flex items-center gap-2 hover:fill-red-200">
                             Portfolio
                             <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
                         </NavbarItem>
-                    </div>
+                    </Link>
                     <div onClick={() => router.push("/#aboutus")}>
                         <NavbarItem>About us</NavbarItem>
                     </div>

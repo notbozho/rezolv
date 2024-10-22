@@ -29,15 +29,18 @@ export default function Hero() {
 
         const tlHeader = gsap.timeline();
 
+        const element = document.querySelector("#hero");
+        const q = gsap.utils.selector(element);
+
         tlHeader
-            .from("#header", {
+            .from(q("#header"), {
                 opacity: 0,
                 duration: 0.7,
                 y: 20,
                 ease: "expo.inOut",
             })
             .from(
-                "#btn",
+                q("#btn"),
                 {
                     opacity: 0,
                     scale: 0.8,
@@ -47,7 +50,7 @@ export default function Hero() {
                 "<",
             )
             .to(
-                "#header",
+                q("#header"),
                 {
                     opacity: 1,
                     duration: 1.7,
@@ -57,7 +60,7 @@ export default function Hero() {
                 "<0.1",
             )
             .to(
-                "#subheader",
+                q("#subheader"),
                 {
                     opacity: 1,
                     duration: 1.5,
@@ -67,7 +70,7 @@ export default function Hero() {
                 "<0.3",
             )
             .to(
-                "#btn",
+                q("#btn"),
                 {
                     opacity: 1,
                     duration: 1.5,
@@ -78,7 +81,7 @@ export default function Hero() {
                 "<0.3",
             )
             .to(
-                "#stats",
+                q("#stats"),
                 {
                     opacity: 1,
                     duration: 1.5,
@@ -95,7 +98,10 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative flex h-screen w-full flex-col items-center justify-evenly">
+        <section
+            className="relative flex h-screen w-full flex-col items-center justify-evenly"
+            id="hero"
+        >
             <div
                 className="absolute -z-30 h-full w-full bg-gradient-to-tr from-neutral-800 via-black via-40% to-neutral-900 opacity-0"
                 id="bg_gradient"
@@ -128,10 +134,10 @@ export default function Hero() {
                 </button>
             </div>
             <div
-                className="grid max-w-[80%] grid-cols-2 gap-4 text-center text-white opacity-0 lg:max-w-[40%] lg:grid-cols-4"
+                className="grid max-w-[80%] grid-cols-1 gap-4 text-center text-white opacity-0 md:grid-cols-4 lg:max-w-[40%]"
                 id="stats"
             >
-                <div className="">
+                <div>
                     {/* <p
                         className="text-3xl font-medium text-white lg:text-5xl"
                         id="stat-value"
@@ -147,7 +153,7 @@ export default function Hero() {
                         Audits
                     </p>
                 </div>
-                <div className="">
+                <div>
                     <AnimatedNumber
                         endValue={12}
                         delay={2}
@@ -158,7 +164,7 @@ export default function Hero() {
                         nSLOC audited
                     </p>
                 </div>
-                <div className="">
+                <div>
                     <AnimatedNumber
                         endValue={6}
                         delay={2}
@@ -168,7 +174,7 @@ export default function Hero() {
                         Criticals Found
                     </p>
                 </div>
-                <div className="">
+                <div>
                     <AnimatedNumber
                         endValue={34}
                         delay={2}

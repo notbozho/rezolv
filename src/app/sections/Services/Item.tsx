@@ -110,6 +110,7 @@ export default function Item({
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={() => href && router.push(href)}
+            id="service_item"
         >
             <div
                 className={`flex h-12 w-12 items-center justify-center self-start rounded-lg bg-neutral-900/50 p-2 shadow-md shadow-neutral-900`}

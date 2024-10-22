@@ -64,7 +64,10 @@ export default function DevelopmentPage() {
                     </div>
                 </div>
             </section>
-            <Process />
+            <Process
+                title="Building Your Vision"
+                description="Our structured process delivers scalable and decentralized solutions aligned with your vision."
+            />
             <QuoteSection
                 gradientDirection="tr"
                 gradientColors={"from-neutral-950 via-black to-neutral-950"}
