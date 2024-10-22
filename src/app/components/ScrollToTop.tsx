@@ -4,10 +4,13 @@ import React, { useEffect } from "react";
 import Arrow from "@/app/assets/icons/arrow-right.svg";
 import { gsap } from "gsap";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 export default function ScrollToTop() {
+    const pathname = usePathname();
+
     const handleScrollToTop = () => {
         gsap.to(window, {
             scrollTo: 0,
@@ -35,7 +38,7 @@ export default function ScrollToTop() {
         return () => {
             tl.kill();
         };
-    }, []);
+    }, [pathname]);
     return (
         <div className="p-1">
             <div
