@@ -49,6 +49,7 @@ export const DropdownItem = ({
             width={140}
             height={70}
             className="h-80 w-[16rem] rounded-lg object-cover mix-blend-multiply grayscale filter transition-all duration-300 group-hover:grayscale-0 group-hover:filter"
+            priority
         />
         <div className="absolute h-full w-full rounded-lg bg-gradient-to-t from-black/60 from-30% to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full p-4">

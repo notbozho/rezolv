@@ -250,7 +250,7 @@ export default function MobileNavbar({
                         <X className="h-8 w-8 text-white" />
                     </div>
                 </div>
-                <div className="flex w-full items-center justify-between space-x-8 text-base text-neutral-300">
+                <div className="flex w-full items-center justify-between text-base text-neutral-300">
                     <div
                         className="flex cursor-pointer items-center"
                         onClick={() => router.push("/")}
@@ -264,8 +264,8 @@ export default function MobileNavbar({
                         />
                     </div>
                     <div className="flex flex-shrink-0 gap-4">
-                        <button className="h-10 w-fit cursor-pointer rounded-lg bg-white px-6 py-1.5 text-sm text-black hover:bg-neutral-200">
-                            Contact us
+                        <button className="h-10 w-fit cursor-pointer rounded-lg bg-white px-4 py-1.5 text-sm text-black hover:bg-neutral-200">
+                            Contact
                         </button>
                         <div
                             className="flex h-10 w-10 items-center justify-center rounded-lg border p-1"

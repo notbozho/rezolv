@@ -17,9 +17,9 @@ export default function Process({
                 id="bg_gradient"
             ></div>
 
-            <div className="container relative mx-auto flex w-full flex-row-reverse items-start justify-center space-y-8">
+            <div className="container relative mx-auto flex w-full flex-col items-center justify-center space-y-8 md:flex-row-reverse md:items-start">
                 {/* header start */}
-                <div className="sticky top-40 flex w-1/2 flex-col items-center pt-20 text-center">
+                <div className="relative flex w-[90vw] flex-col items-center pr-2 pt-20 text-center md:sticky md:top-40 md:w-1/2 md:items-end md:text-end">
                     <p className="relative bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 font-semibold tracking-wider text-transparent">
                         Our process
                     </p>

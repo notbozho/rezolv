@@ -20,6 +20,8 @@ interface FileData {
 const Portfolio: FC = () => {
     const [files, setFiles] = useState<FileData[]>([]);
     const [slicedFiles, setSlicedFiles] = useState<FileData[]>([]);
+    const [windowWidth, setWindowWidth] = useState<number>(0);
+
     const repoUrl =
         "https://api.github.com/repos/RezolvSolutions/Audits/contents/reports/pdf-format";
 
@@ -41,13 +43,25 @@ const Portfolio: FC = () => {
         };
 
         fetchFiles();
+
+        if (typeof window !== "undefined") {
+            // Get the initial window width
+            setWindowWidth(window.innerWidth);
+
+            // Add event listener to update width on resize
+            const handleResize = () => setWindowWidth(window.innerWidth);
+            window.addEventListener("resize", handleResize);
+
+            // Cleanup the event listener on component unmount
+            return () => window.removeEventListener("resize", handleResize);
+        }
     }, []);
 
     useEffect(() => {
         const windowWidth = window.innerWidth;
         const sliceCount = windowWidth < 1024 ? 5 : 8;
         setSlicedFiles(files.slice(0, sliceCount));
-    }, [window.innerWidth]);
+    }, [windowWidth]);
 
     return (
         <section className="relative w-full" id="process_section">
@@ -71,7 +85,7 @@ const Portfolio: FC = () => {
                     </p>
                 </div>
                 {/* header end */}
-                <div className="mx-auto max-w-[90vw] pb-36 md:pb-48 lg:max-w-screen-xl">
+                <div className="mx-auto max-w-[90vw] pb-36 md:pb-48">
                     <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
                         {slicedFiles.length > 0 &&
                             slicedFiles.map((file, index) => (
@@ -94,19 +108,19 @@ const Portfolio: FC = () => {
                                     </div>
                                 </Link>
                             ))}
-                        <Link href="https://github.com/RezolvSolutions/Audits/tree/main/reports/pdf-format">
-                            <div className="right-0 col-start-3 row-start-3 flex h-28 cursor-pointer select-none flex-col items-end justify-center rounded-lg border border-red-900 bg-neutral-900/70 pr-6 hover:bg-neutral-900/90">
-                                <p className="text-sm font-light text-neutral-400">
-                                    Browse
-                                </p>
-                                <div className="flex">
-                                    <p className="text-2xl font-medium">
+                        <div className="right-0 col-start-2 row-start-3 flex h-28 select-none flex-col items-end justify-center rounded-lg pr-6 lg:col-start-3">
+                            <p className="text-sm font-light text-neutral-400">
+                                Browse
+                            </p>
+                            <Link href="https://github.com/RezolvSolutions/Audits/tree/main/reports/pdf-format">
+                                <div className="flex cursor-pointer">
+                                    <p className="text-2xl font-medium hover:underline">
                                         View all
                                     </p>
                                     <Arrow className="h-6 w-6 pl-2 pt-2" />
                                 </div>
-                            </div>
-                        </Link>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

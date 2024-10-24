@@ -64,26 +64,30 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     }, []);
 
     return (
-        <div className="w-[50%] font-sans md:px-10" ref={containerRef}>
+        <div
+            className="w-full font-sans md:w-[50%] md:px-10"
+            ref={containerRef}
+        >
             <div className="relative mx-auto pb-20">
                 {data.map((item, index) => (
                     <div
                         key={index}
                         className="timeline-entry flex justify-start pt-10 md:gap-10 md:pt-40"
                     >
-                        <div className="sticky top-40 z-40 flex flex-col items-start md:w-full">
-                            <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full bg-neutral-950 md:left-3">
-                                <div className="h-4 w-4 rounded-full border border-neutral-700 bg-neutral-800 p-2" />
+                        <div className="sticky top-40 flex flex-col items-start md:w-full">
+                            <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900/50">
+                                <p className="z-50">{index + 1}</p>
+                                {/* <div className="h-4 w-4 rounded-full border border-neutral-700 bg-neutral-800 p-2" /> */}
                             </div>
-                            <h3 className="hidden pb-1 text-start text-lg md:block md:pl-20 md:text-3xl">
+                            <h3 className="hidden pb-1 text-start text-lg text-white md:block md:pl-20 md:text-3xl">
                                 {item.title}
                             </h3>
-                            <p className="text-left text-neutral-400 md:pl-20">
+                            <p className="hidden text-left text-neutral-400 md:block md:pl-20">
                                 {item.description}
                             </p>
                         </div>
-                        <div className="relative block w-full bg-red-500 pl-20 pr-4 md:hidden">
-                            <h3 className="mb-4 text-left text-lg text-neutral-400">
+                        <div className="relative block w-full pl-20 pr-4 md:hidden">
+                            <h3 className="mb-4 text-left text-lg text-white">
                                 {item.title}
                             </h3>
                             <p className="text-left text-neutral-400">
@@ -94,7 +98,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 ))}
                 <div
                     ref={lineRef}
-                    className="absolute left-8 top-0 w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-red-500 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8"
+                    className="absolute left-8 top-0 -z-10 w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-red-500 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
                     style={{ height: height + "px" }}
                 >
                     <div className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-purple-500 from-[0%] via-blue-500 via-[10%] to-transparent" />

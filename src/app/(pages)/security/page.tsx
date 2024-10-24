@@ -84,13 +84,13 @@ export default function SecurityPage() {
                     </Link>
                     <div
                         id="bg_icon"
-                        className="absolute -bottom-40 left-2 text-white opacity-30 mix-blend-overlay blur-xl"
+                        className="absolute -bottom-40 left-2 hidden text-white opacity-30 mix-blend-overlay blur-xl md:block"
                     >
                         <Lock className="h-96 w-96" />
                     </div>{" "}
                     <div
                         id="bg_icon"
-                        className="absolute bottom-20 right-2 text-white opacity-30 mix-blend-overlay blur-xl"
+                        className="absolute bottom-20 right-2 hidden text-white opacity-30 mix-blend-overlay blur-xl md:block"
                     >
                         <Lock className="h-96 w-96" />
                     </div>
