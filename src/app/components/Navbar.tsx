@@ -190,7 +190,9 @@ export default function Navbar({ className = "" }: { className?: string }) {
                         className="relative"
                         onMouseEnter={() => setDropdown(true)}
                     >
-                        <NavbarItem>Solutions</NavbarItem>
+                        <Link href="/#solutions">
+                            <NavbarItem>Solutions</NavbarItem>
+                        </Link>
                         {dropdown && (
                             <div
                                 className="absolute -left-8 pt-4"
