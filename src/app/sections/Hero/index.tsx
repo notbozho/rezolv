@@ -121,10 +121,8 @@ export default function Hero() {
                     className="max-w-[90%] text-center text-neutral-400 opacity-0 sm:text-base lg:max-w-screen-lg lg:pb-10"
                     id="subheader"
                 >
-                    Ipos sum dolor sit amet, consectetur adipiscing elit. Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit. Lorem{" "}
-                    <br />
-                    ipsum r adipiscing elit. Lorem ip
+                    Delivering reliable smart contract solutions that drive
+                    blockchain innovation.
                 </p>
                 <button
                     className="cursor-pointer rounded-lg bg-white px-14 py-2 text-lg text-black opacity-0"
@@ -145,7 +143,7 @@ export default function Hero() {
                         7
                     </p> */}
                     <AnimatedNumber
-                        endValue={7}
+                        endValue={10}
                         delay={2}
                         className="text-3xl font-medium text-white lg:text-5xl"
                     />
@@ -155,7 +153,7 @@ export default function Hero() {
                 </div>
                 <div>
                     <AnimatedNumber
-                        endValue={12}
+                        endValue={60}
                         delay={2}
                         suffix="K"
                         className="text-3xl font-medium text-white lg:text-5xl"
@@ -166,7 +164,7 @@ export default function Hero() {
                 </div>
                 <div>
                     <AnimatedNumber
-                        endValue={6}
+                        endValue={9}
                         delay={2}
                         className="text-3xl font-medium text-white lg:text-5xl"
                     />
@@ -176,7 +174,7 @@ export default function Hero() {
                 </div>
                 <div>
                     <AnimatedNumber
-                        endValue={34}
+                        endValue={50}
                         delay={2}
                         className="text-3xl font-medium text-white lg:text-5xl"
                     />

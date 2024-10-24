@@ -6,92 +6,41 @@ import Process from "@/app/sections/Process";
 import QuoteSection from "@/app/sections/Quote";
 import gsap from "gsap";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function DevelopmentPage() {
     const content = [
         {
-            title: "Initial Consultation",
-            content: (
-                <div>
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                    <p className="text-neutral-400">
-                        We start by outlining the project&apos;s scope and
-                        setting a clear timeline and pricing for the audit.
-                    </p>
-                </div>
-            ),
+            title: "Project Scope and Planning",
+            description:
+                "We begin by defining the project's scope, requirements, and deliverables. This includes setting a clear timeline and pricing for the development process.",
         },
         {
-            title: "Pre-audit Review",
-            content: (
-                <div>
-                    <h3 className="text-2xl font-semibold text-white">
-                        Opravqme pupeshite
-                    </h3>
-                    <p className="text-lgtext-neutral-400">
-                        We start by understanding your project requirements and
-                        goals
-                    </p>
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                </div>
-            ),
+            title: "Architecture and Design",
+            description:
+                "Our team drafts the architecture and design of the smart contracts, ensuring they meet the project's functional and security needs.",
         },
         {
-            title: "In-Depth Security Assessment",
-            content: (
-                <div>
-                    <h3 className="text-2xl font-semibold text-white">
-                        Opravqme pupeshite
-                    </h3>
-                    <p className="text-lg text-neutral-400">
-                        We start by understanding your project requirements and
-                        goals
-                    </p>
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                </div>
-            ),
+            title: "Smart Contract Development",
+            description:
+                "We write and implement the smart contracts, following best practices in security and optimization for blockchain environments.",
         },
         {
-            title: "Risk Mitigation Review",
-            content: (
-                <div>
-                    <h3 className="text-2xl font-semibold text-white">
-                        Opravqme pupeshite
-                    </h3>
-                    <p className="text-lg text-neutral-400">
-                        We start by understanding your project requirements and
-                        goals
-                    </p>
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                </div>
-            ),
+            title: "Testing and Validation",
+            description:
+                "Comprehensive testing is conducted to validate the contract's functionality, performance, and security under various conditions.",
+        },
+        {
+            title: "Deployment and Documentation",
+            description:
+                "Once finalized, we deploy the smart contracts to the agreed blockchain network and provide detailed documentation for future maintenance and integration.",
+        },
+        {
+            title: "Post-Deployment Support",
+            description:
+                "We offer a period of post-deployment support to ensure smooth operation and assist with any necessary updates or fixes.",
         },
     ];
+
     useEffect(() => {
         const tlBG = gsap.timeline();
 

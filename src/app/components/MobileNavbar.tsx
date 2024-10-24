@@ -197,7 +197,12 @@ export default function MobileNavbar({
                         </a>
                     </div>
                     <div className="flex flex-col items-center gap-6 text-white">
-                        <NavbarItem id="mobile_nav_item">Solutions</NavbarItem>
+                        <div
+                            onClick={() => router.push("/#solutions")}
+                            id="mobile_nav_item"
+                        >
+                            <NavbarItem>Solutions</NavbarItem>
+                        </div>
                         <div
                             onClick={() => router.push("/blog")}
                             id="mobile_nav_item"
