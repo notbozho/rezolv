@@ -7,7 +7,6 @@ import QuoteSection from "@/app/sections/Quote";
 import gsap from "gsap";
 import Link from "next/link";
 import Portfolio from "./Portfolio";
-import Image from "next/image";
 
 export default function SecurityPage() {
     const content = [
