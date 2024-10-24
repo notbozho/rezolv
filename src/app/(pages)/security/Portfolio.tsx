@@ -1,3 +1,5 @@
+"use client";
+
 import React, { FC, useEffect, useState } from "react";
 import Arrow from "@/app/assets/icons/arrow-right.svg";
 import Link from "next/link";
