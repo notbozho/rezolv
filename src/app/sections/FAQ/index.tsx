@@ -7,7 +7,7 @@ import clsx from "clsx";
 const faqs = [
     {
         question: "What is a smart contract audit?",
-        answer: "A smart contract audit is a security review of the codebase of a smart contract. The goal is to identify potential vulnerabilities and bugs that could be exploited by malicious actors.",
+        answer: "A smart contract audit is a security review of the codebase of a DeFi protocol. The goal is to identify potential vulnerabilities and bugs that could be exploited by malicious actors.",
     },
     {
         question: "Why do I need a smart contract audit?",
