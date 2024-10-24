@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Timeline } from "@/app/components/Timeline";
 
 export default function Process({
