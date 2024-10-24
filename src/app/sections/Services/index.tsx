@@ -98,22 +98,22 @@ export default function Services() {
                     </p>
                 </div>
                 {/* header end */}
-                <div className="flex h-full w-full flex-col items-center justify-between gap-8 px-8 lg:h-56 lg:flex-row">
+                <div className="flex h-full w-full flex-col items-center justify-between gap-8 px-8 lg:h-64 lg:flex-row">
                     <Item
                         header="Development"
-                        description="prodavame pupeshi prodavame pupeshi prodavame pupeshi prodavame pupeshi"
+                        description="We provide complete blockchain solutions, from infrastructure selection to product development and ongoing support, ensuring seamless business integration."
                         Icon={Code}
                         href="/development"
                     />{" "}
                     <Item
                         header="Audits"
-                        description="prodavame pupeshi prodavame pupeshi prodavame pupeshi"
+                        description="Make sure your application is secure and deployment-ready on any blockchain with our fast and reliable smart contract security audit services."
                         Icon={Lock}
                         href="/security"
                     />{" "}
                     <Item
                         header="Protocol Monitoring"
-                        description="prodavame pupeshi prodavame pupeshi"
+                        description="Wnsure the continuous security and performance of your blockchain protocols with our real-time monitoring services."
                         Icon={Monitor}
                     />
                 </div>

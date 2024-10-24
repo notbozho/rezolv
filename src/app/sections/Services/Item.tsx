@@ -121,7 +121,9 @@ export default function Item({
                 <p className="text-2xl font-medium text-white lg:text-3xl">
                     {header}
                 </p>
-                <p className="font-light text-neutral-400">{description}</p>
+                <p className="py-2 font-light text-neutral-400">
+                    {description}
+                </p>
             </div>
             {href && (
                 <Arrow

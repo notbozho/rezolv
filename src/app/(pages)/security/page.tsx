@@ -5,8 +5,39 @@ import Lock from "@/app/assets/icons/lock.svg";
 import Process from "@/app/sections/Process";
 import QuoteSection from "@/app/sections/Quote";
 import gsap from "gsap";
+import Link from "next/link";
+import Portfolio from "./Portfolio";
+import Image from "next/image";
 
 export default function SecurityPage() {
+    const content = [
+        {
+            title: "Project Scope and Timeline",
+            description:
+                "We start by outlining the project's scope and setting a clear timeline and pricing for the audit.",
+        },
+        {
+            title: "Repository Management",
+            description:
+                "We create a fork of the repository to ensure efficient issue tracking and facilitate discussions throughout the audit process.",
+        },
+        {
+            title: "In-Depth Security Assessment",
+            description:
+                "A thorough and careful evaluation of all relevant elements of the smart contract, resulting in a detailed audit report that provides a clear and actionable plan for enhancing security measures.",
+        },
+        ,
+        {
+            title: "Risk Mitigation",
+            description:
+                "A specific period is set aside to review and verify all fixes, ensuring they meet our quality standards.",
+        },
+        {
+            title: "Report Delivery",
+            description:
+                "Once the audit is complete, a detailed report is carefully prepared and delivered to you.",
+        },
+    ];
     useEffect(() => {
         const tlBG = gsap.timeline();
 
@@ -40,15 +71,18 @@ export default function SecurityPage() {
                         Security reviews
                     </h1>
                     <p className="max-w-[90%] pb-10 text-center text-base text-neutral-400 sm:text-lg lg:max-w-screen-lg">
-                        Keep your blockchain project safe with our expert smart
-                        contract auditing.
+                        Ensure your application&apos;s security and readiness
+                        for deployment on any blockchain with our reliable smart
+                        contract audit services.
                     </p>
-                    <button
-                        className="cursor-pointer rounded-lg bg-white px-14 py-2 text-lg text-black"
-                        id="btn"
-                    >
-                        kur do koleno
-                    </button>
+                    <Link href="https://t.me/maslarovk">
+                        <button
+                            className="cursor-pointer rounded-lg bg-white px-14 py-2 text-lg text-black"
+                            id="btn"
+                        >
+                            Get in touch
+                        </button>
+                    </Link>
                     <div
                         id="bg_icon"
                         className="absolute -bottom-40 left-2 text-white opacity-30 mix-blend-overlay blur-xl"
@@ -63,13 +97,17 @@ export default function SecurityPage() {
                     </div>
                 </div>
             </section>
+            <Portfolio />
             <Process
+                content={content}
                 title="Securing your project"
                 description="A streamlined process designed to secure
                         your blockchain project"
+                gradientDirection="tr"
+                gradientColors={"from-neutral-950 via-black to-neutral-950"}
             />
             <QuoteSection
-                gradientDirection="tr"
+                gradientDirection="br"
                 gradientColors={"from-neutral-950 via-black to-neutral-950"}
             />
         </>

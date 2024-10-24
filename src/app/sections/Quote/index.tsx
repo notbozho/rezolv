@@ -1,8 +1,6 @@
-"use client";
-
 import React from "react";
 import Telegram from "@/app/assets/icons/telegram.svg";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function QuoteSection({
     gradientDirection,
@@ -11,8 +9,6 @@ export default function QuoteSection({
     gradientDirection: string;
     gradientColors: string;
 }) {
-    const router = useRouter();
-
     return (
         <section className="relative w-full py-36" id="quote">
             <div
@@ -36,17 +32,16 @@ export default function QuoteSection({
                 {/* header end */}
 
                 <div className="relative flex w-full items-center justify-center lg:h-[8rem] lg:w-[60%] lg:justify-end lg:pr-10">
-                    <button
-                        onClick={() => router.push("https://t.me/maslarovk")}
-                        className="group relative flex cursor-pointer overflow-hidden rounded-lg bg-white px-14 py-2 text-lg text-black"
-                    >
-                        <span className="transition duration-500 group-hover:translate-x-40">
-                            Get a quote
-                        </span>
-                        <div className="absolute inset-0 z-20 flex -translate-x-40 items-center justify-center text-white transition duration-500 group-hover:translate-x-0">
-                            <Telegram className="h-6 w-6 text-black" />
-                        </div>
-                    </button>
+                    <Link href="https://t.me/maslarovk">
+                        <button className="group relative flex cursor-pointer overflow-hidden rounded-lg bg-white px-14 py-2 text-lg text-black">
+                            <span className="transition duration-500 group-hover:translate-x-40">
+                                Get a quote
+                            </span>
+                            <div className="absolute inset-0 z-20 flex -translate-x-40 items-center justify-center text-white transition duration-500 group-hover:translate-x-0">
+                                <Telegram className="h-6 w-6 text-black" />
+                            </div>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

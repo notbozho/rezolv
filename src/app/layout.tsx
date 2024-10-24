@@ -55,7 +55,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${switzer.variable} cursor-white antialiased`}>
+            <body className={`${switzer.variable}  -white antialiased`}>
                 <div className="fixed inset-0 -z-10 w-full bg-noise opacity-[0.07]"></div>
                 <ScrollToTop />
                 <MobileNavbar className="block lg:hidden" />

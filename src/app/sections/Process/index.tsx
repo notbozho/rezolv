@@ -4,128 +4,36 @@ import React from "react";
 import Image from "next/image";
 import { Timeline } from "@/app/components/Timeline";
 
-export default function Process({ title, description }) {
-    const content = [
-        {
-            title: "Initial Consultation",
-            content: (
-                <div>
-                    <h3 className="text-2xl font-semibold text-white">
-                        Opravqme pupeshite
-                    </h3>
-                    <p className="text-neutral-400">
-                        We start by understanding your project requirements and
-                        goals
-                    </p>
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                </div>
-            ),
-        },
-        {
-            title: "Pre-audit Review",
-            content: (
-                <div>
-                    <h3 className="text-2xl font-semibold text-white">
-                        Opravqme pupeshite
-                    </h3>
-                    <p className="text-lgtext-neutral-400">
-                        We start by understanding your project requirements and
-                        goals
-                    </p>
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                </div>
-            ),
-        },
-        {
-            title: "In-Depth Security Assessment",
-            content: (
-                <div>
-                    <h3 className="text-2xl font-semibold text-white">
-                        Opravqme pupeshite
-                    </h3>
-                    <p className="text-lg text-neutral-400">
-                        We start by understanding your project requirements and
-                        goals
-                    </p>
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                </div>
-            ),
-        },
-        {
-            title: "Risk Mitigation Review",
-            content: (
-                <div>
-                    <h3 className="text-2xl font-semibold text-white">
-                        Opravqme pupeshite
-                    </h3>
-                    <p className="text-lg text-neutral-400">
-                        We start by understanding your project requirements and
-                        goals
-                    </p>
-                    <Image
-                        src="/assets/services/security.png"
-                        alt="startup template"
-                        width={500}
-                        height={500}
-                        className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-                    />
-                </div>
-            ),
-        },
-    ];
+export default function Process({
+    title,
+    description,
+    content,
+    gradientDirection = "br",
+    gradientColors = "from-neutral-900 via-black via-40% to-neutral-950",
+}) {
     return (
         <section className="relative w-full" id="process_section">
             <div
-                className="absolute inset-0 -z-50 w-full bg-gradient-to-br from-neutral-900 via-black via-40% to-neutral-950 opacity-0"
+                className={`absolute inset-0 -z-50 w-full opacity-0 bg-gradient-to-${gradientDirection} ${gradientColors}`}
                 id="bg_gradient"
             ></div>
 
-            <div className="container relative mx-auto flex flex-col items-center justify-start space-y-8 overflow-hidden">
+            <div className="container relative mx-auto flex w-full flex-row-reverse items-start justify-center space-y-8">
                 {/* header start */}
-                <div className="flex flex-col items-center text-center">
+                <div className="sticky top-40 flex w-1/2 flex-col items-center pt-20 text-center">
                     <p className="relative bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 font-semibold tracking-wider text-transparent">
                         Our process
                     </p>
-                    <h2 className="pb-4 text-5xl text-white">{title}</h2>
+                    <h2 className="pb-4 text-4xl text-white md:text-5xl">
+                        {title}
+                    </h2>
                     <p className="text-neutral-400 lg:max-w-lg">
                         {description}
                     </p>
                 </div>
                 {/* header end */}
+                <Timeline data={content} />
             </div>
-            <Timeline data={content} />
         </section>
     );
 }
