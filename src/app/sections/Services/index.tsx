@@ -113,7 +113,7 @@ export default function Services() {
                     />{" "}
                     <Item
                         header="Protocol Monitoring"
-                        description="Wnsure the continuous security and performance of your blockchain protocols with our real-time monitoring services."
+                        description="Ensure the continuous security and performance of your blockchain protocols with our real-time monitoring services."
                         Icon={Monitor}
                     />
                 </div>

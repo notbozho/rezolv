@@ -3,9 +3,13 @@ import Telegram from "@/app/assets/icons/telegram.svg";
 import Link from "next/link";
 
 export default function QuoteSection({
+    title,
+    description,
     gradientDirection,
     gradientColors,
 }: {
+    title: string;
+    description: string;
     gradientDirection: string;
     gradientColors: string;
 }) {
@@ -22,11 +26,10 @@ export default function QuoteSection({
                         Contact us
                     </p>
                     <h2 className="pb-4 text-4xl text-white md:text-5xl">
-                        Ensure your code’s safety with a professional audit
+                        {title}
                     </h2>
                     <p className="pb-10 text-neutral-400 lg:max-w-md">
-                        Get peace of mind with a security audit. Contact us for
-                        a quote.
+                        {description}
                     </p>
                 </div>
                 {/* header end */}

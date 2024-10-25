@@ -108,6 +108,8 @@ export default function DevelopmentPage() {
                 description="Our structured process delivers scalable and decentralized solutions aligned with your vision."
             />
             <QuoteSection
+                title="Build your vision securely with our smart contract expertise"
+                description="Transform your ideas into robust code. Reach out for a custom development quote."
                 gradientDirection="tr"
                 gradientColors={"from-neutral-950 via-black to-neutral-950"}
             />

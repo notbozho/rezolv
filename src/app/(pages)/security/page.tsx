@@ -106,6 +106,8 @@ export default function SecurityPage() {
                 gradientColors={"from-neutral-950 via-black to-neutral-950"}
             />
             <QuoteSection
+                title="Ensure your code's safety with a professional audit"
+                description="Get peace of mind with a security audit. Contact us for a quote."
                 gradientDirection="br"
                 gradientColors={"from-neutral-950 via-black to-neutral-950"}
             />
