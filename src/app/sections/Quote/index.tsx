@@ -28,7 +28,7 @@ export default function QuoteSection({
                     <h2 className="pb-4 text-4xl text-white md:text-5xl">
                         {title}
                     </h2>
-                    <p className="pb-10 text-neutral-400 lg:max-w-md">
+                    <p className="pb-10 text-neutral-400 ">
                         {description}
                     </p>
                 </div>
