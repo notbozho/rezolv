@@ -72,7 +72,7 @@ export default function Testimonials() {
     }, [emblaApi]);
 
     return (
-        <section className="relative w-full py-36" id="testimonials">
+        <section className="relative w-full py-10 md:py-36" id="testimonials">
             <div
                 className="absolute inset-0 -z-50 w-full bg-gradient-to-tr from-neutral-900 via-black to-neutral-950 opacity-0"
                 id="bg_gradient"

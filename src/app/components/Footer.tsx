@@ -6,12 +6,9 @@ import Arrow from "@/app/assets/icons/arrow-right.svg";
 import Telegram from "@/app/assets/icons/telegram.svg";
 import GitHub from "@/app/assets/icons/github.svg";
 import X from "@/app/assets/icons/x.svg";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function Footer() {
-    const router = useRouter();
-
     return (
         <footer className="z-30 w-full">
             <div className="mx-auto border-t border-neutral-800 bg-gradient-to-b from-black to-neutral-950">
@@ -28,48 +25,44 @@ export default function Footer() {
                             Rezolv
                         </h1>
                     </div>
-                    <div className="flex flex-wrap items-center justify-center text-center lg:flex-nowrap lg:space-x-8">
-                        <p
-                            onClick={() => router.push("/#solutions")}
+                    <div className="flex flex-wrap items-center justify-center text-center text-white lg:flex-nowrap lg:space-x-8">
+                        <Link
+                            href="/#solutions"
                             className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             Solutions
-                        </p>
-                        <p
-                            onClick={() => router.push("/blog")}
+                        </Link>
+                        <Link
+                            href="/blog"
                             className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             Blog
-                        </p>
-                        <p
-                            onClick={() => router.push("/#testimonials")}
+                        </Link>
+                        <Link
+                            href="/#testimonials"
                             className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             Testimonials
-                        </p>
-                        <p
-                            onClick={() =>
-                                router.push(
-                                    "https://github.com/RezolvSolutions/Audits",
-                                )
-                            }
+                        </Link>
+                        <Link
+                            href="https://github.com/RezolvSolutions/Audits"
                             className="flex basis-1/2 cursor-pointer items-center justify-center gap-2 transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             Portfolio
                             <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
-                        </p>
-                        <p
-                            onClick={() => router.push("/#aboutus")}
+                        </Link>
+                        <Link
+                            href="/#aboutus"
                             className="basis-1/2 cursor-pointer text-nowrap transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             About us
-                        </p>
-                        <p
-                            onClick={() => router.push("/#faq")}
+                        </Link>
+                        <Link
+                            href="/#faq"
                             className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             FAQs
-                        </p>
+                        </Link>
                     </div>
                 </div>
                 <div className="container mx-auto flex flex-col-reverse items-center justify-between gap-4 border-t border-neutral-900 py-6 lg:flex-row lg:gap-0">

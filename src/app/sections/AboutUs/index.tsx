@@ -84,7 +84,7 @@ const TeamCard = ({
                     id="content"
                     className="w-full overflow-hidden rounded-lg border border-neutral-900 bg-neutral-950 p-2"
                 >
-                    <h3 className="text-lg font-medium">{name}</h3>
+                    <h3 className="text-lg font-medium text-white">{name}</h3>
                     <p className="text-sm text-neutral-400">{role}</p>
                     <div
                         id="socials"

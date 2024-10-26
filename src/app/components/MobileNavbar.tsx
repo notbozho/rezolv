@@ -193,15 +193,15 @@ export default function MobileNavbar({
                             height={100}
                             className="h-20 w-20"
                         />
-                        <Link
-                            href="/"
-                            className="cursor-pointer pr-6 text-2xl text-white"
-                        >
+                        <a className="cursor-pointer pr-6 text-2xl text-white">
                             Rezolv
-                        </Link>
+                        </a>
                     </div>
                     <div className="flex flex-col items-center gap-6 text-white">
-                        <Link href="/#solutions">
+                        <Link
+                            onClick={() => closeAnimation()}
+                            href="/#solutions"
+                        >
                             <NavbarItem
                                 active={isActive("/", "solutions")}
                                 id="mobile_nav_item"
@@ -209,7 +209,7 @@ export default function MobileNavbar({
                                 Solutions
                             </NavbarItem>
                         </Link>
-                        <Link href="/blog">
+                        <Link onClick={() => closeAnimation()} href="/blog">
                             <NavbarItem
                                 active={inBlog()}
                                 className="flex items-center gap-2 hover:fill-red-200"
@@ -219,7 +219,10 @@ export default function MobileNavbar({
                             </NavbarItem>
                         </Link>
 
-                        <Link href="/#testimonials">
+                        <Link
+                            onClick={() => closeAnimation()}
+                            href="/#testimonials"
+                        >
                             <NavbarItem
                                 active={isActive("/", "testimonials")}
                                 id="mobile_nav_item"
@@ -246,7 +249,10 @@ export default function MobileNavbar({
                             </NavbarItem>
                         </Link>
                         <Link href="/#faq">
-                            <NavbarItem active={isActive("/", "faq")}>
+                            <NavbarItem
+                                id="mobile_nav_item"
+                                active={isActive("/", "faq")}
+                            >
                                 FAQs
                             </NavbarItem>
                         </Link>
