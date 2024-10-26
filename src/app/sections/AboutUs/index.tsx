@@ -141,7 +141,7 @@ export default function AboutUs() {
                         role="Co-Founder"
                         twitter="https://x.com/radev_eth"
                         telegram="https://t.me/radev_eth"
-                        github="https://github.com/radevdev"
+                        github="https://github.com/radeveth"
                     />
                 </div>
             </div>
