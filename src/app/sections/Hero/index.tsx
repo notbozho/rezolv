@@ -111,7 +111,7 @@ export default function Hero() {
             </div>
             <div className="container relative mx-auto flex flex-col items-center justify-center space-y-8 overflow-hidden">
                 <h1
-                    className="pt-32 text-center text-3xl font-light text-white opacity-0 md:text-6xl"
+                    className="px-2 pt-32 text-center text-3xl font-light text-white opacity-0 md:px-0 md:text-6xl"
                     id="header"
                 >
                     Elevate your smart contracts <br />

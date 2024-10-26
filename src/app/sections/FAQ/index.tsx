@@ -49,7 +49,7 @@ export default function FAQ() {
                 className="absolute inset-0 -z-50 w-full bg-gradient-to-br from-neutral-900 via-black to-neutral-950 opacity-0"
                 id="bg_gradient"
             ></div>
-            <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-5 space-y-8 overflow-hidden lg:flex-row lg:items-start lg:justify-start lg:gap-0">
+            <div className="container mx-auto flex flex-col-reverse items-center justify-center gap-5 space-y-8 overflow-hidden px-0 sm:px-6 lg:flex-row lg:items-start lg:justify-start lg:gap-0">
                 {/* questions start */}
                 <div className="flex w-[90%] flex-col gap-5 rounded-lg lg:w-1/2">
                     {faqs.map((faq, index) => (

@@ -169,7 +169,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
             id="navbar"
             onMouseLeave={() => closeAnimation()}
         >
-            <div className="container mx-auto flex items-center justify-between py-6">
+            <div className="container mx-auto flex items-center justify-between px-0 py-6 sm:px-6">
                 <div className="flex items-center space-x-8 text-base text-neutral-300">
                     <div
                         className="flex cursor-pointer items-center"

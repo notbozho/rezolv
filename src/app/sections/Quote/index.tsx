@@ -19,7 +19,7 @@ export default function QuoteSection({
                 className={`absolute inset-0 -z-50 w-full opacity-0 bg-gradient-to-${gradientDirection} ${gradientColors}`}
                 id="bg_gradient"
             ></div>
-            <div className="container mx-auto flex flex-col items-center justify-start space-y-8 overflow-hidden lg:flex-row lg:items-start">
+            <div className="container mx-auto flex flex-col items-center justify-start space-y-8 overflow-hidden px-0 sm:px-6 lg:flex-row lg:items-start">
                 {/* header start */}
                 <div className="flex max-w-[75%] flex-col text-center lg:w-1/2 lg:text-start">
                     <p className="bg-gradient-to-r from-red-800 to-red-900 bg-clip-text pb-2 font-semibold tracking-wider text-transparent">

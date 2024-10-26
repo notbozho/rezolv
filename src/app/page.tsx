@@ -15,8 +15,8 @@ export default function HomePage() {
             <FAQ />
             <AboutUs />
             <QuoteSection
-                title="Securely build and audit your smart contracts with expert precision"
-                description="Our comprehensive Web3 service handles every step—from secure development to meticulous security audits. Get in touch for a quote tailored to your project."
+                title="Can you afford a $25M exploit? Our team will Ensure you never have to find out"
+                description="Don’t wait until it’s too late—get our expert security audit that has already protected millions in DeFi protocols. Book a free consultation now."
                 gradientDirection="br"
                 gradientColors={
                     "from-neutral-900 via-black via-40% to-neutral-950"
