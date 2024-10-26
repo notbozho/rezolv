@@ -99,7 +99,7 @@ export default function Hero() {
 
     return (
         <section
-            className="relative flex h-screen w-full flex-col items-center justify-evenly"
+            className="relative flex min-h-screen w-full flex-col items-center justify-evenly"
             id="hero"
         >
             <div

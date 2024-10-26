@@ -15,7 +15,7 @@ export default function HomePage() {
             <FAQ />
             <AboutUs />
             <QuoteSection
-                title="Can you afford a $25M exploit? Our team will Ensure you never have to find out"
+                title="Can you afford a $25M exploit? Our team will ensure you never have to find out"
                 description="Don’t wait until it’s too late—get our expert security audit that has already protected millions in DeFi protocols. Book a free consultation now."
                 gradientDirection="br"
                 gradientColors={
