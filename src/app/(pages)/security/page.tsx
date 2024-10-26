@@ -25,7 +25,6 @@ export default function SecurityPage() {
             description:
                 "A thorough and careful evaluation of all relevant elements of the smart contract, resulting in a detailed audit report that provides a clear and actionable plan for enhancing security measures.",
         },
-        ,
         {
             title: "Risk Mitigation",
             description:
