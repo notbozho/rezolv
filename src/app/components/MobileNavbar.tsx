@@ -10,6 +10,7 @@ import Arrow from "@/app/assets/icons/arrow-right.svg";
 import X from "./ui/X";
 import { gsap } from "gsap";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function MobileNavbar({
     className = "",
@@ -192,60 +193,63 @@ export default function MobileNavbar({
                             height={100}
                             className="h-20 w-20"
                         />
-                        <a className="cursor-pointer pr-6 text-2xl text-white">
+                        <Link
+                            href="/"
+                            className="cursor-pointer pr-6 text-2xl text-white"
+                        >
                             Rezolv
-                        </a>
+                        </Link>
                     </div>
                     <div className="flex flex-col items-center gap-6 text-white">
-                        <div
-                            onClick={() => router.push("/#solutions")}
-                            id="mobile_nav_item"
-                        >
-                            <NavbarItem>Solutions</NavbarItem>
-                        </div>
-                        <div
-                            onClick={() => router.push("/blog")}
-                            id="mobile_nav_item"
-                        >
+                        <Link href="/#solutions">
+                            <NavbarItem
+                                active={isActive("/", "solutions")}
+                                id="mobile_nav_item"
+                            >
+                                Solutions
+                            </NavbarItem>
+                        </Link>
+                        <Link href="/blog">
                             <NavbarItem
                                 active={inBlog()}
                                 className="flex items-center gap-2 hover:fill-red-200"
+                                id="mobile_nav_item"
                             >
                                 Blog
                             </NavbarItem>
-                        </div>
-                        <div
-                            onClick={() => {
-                                router.push("/#testimonials");
-                                closeAnimation();
-                            }}
-                            id="mobile_nav_item"
-                        >
-                            <NavbarItem active={isActive("/", "testimonials")}>
+                        </Link>
+
+                        <Link href="/#testimonials">
+                            <NavbarItem
+                                active={isActive("/", "testimonials")}
+                                id="mobile_nav_item"
+                            >
                                 Testimonials
                             </NavbarItem>
-                        </div>
-                        <NavbarItem
-                            id="mobile_nav_item"
-                            className="flex items-center gap-2 hover:fill-red-200"
-                        >
-                            <a href="https://github.com/RezolvSolutions/Audits">
+                        </Link>
+
+                        <Link href="https://github.com/RezolvSolutions/Audits">
+                            <NavbarItem
+                                id="mobile_nav_item"
+                                className="flex items-center gap-2 hover:fill-red-200"
+                            >
                                 Portfolio
-                            </a>
-                            <Arrow className="mb-2 h-4 w-4 -rotate-45 fill-white opacity-80" />
-                        </NavbarItem>
-                        <NavbarItem id="mobile_nav_item">About us</NavbarItem>
-                        <div
-                            id="mobile_nav_item"
-                            onClick={() => {
-                                router.push("/#faq");
-                                closeAnimation();
-                            }}
-                        >
+                                <Arrow className="mb-2 h-4 w-4 -rotate-45 fill-white opacity-80" />
+                            </NavbarItem>
+                        </Link>
+                        <Link href="/#aboutus">
+                            <NavbarItem
+                                active={isActive("/", "aboutus")}
+                                id="mobile_nav_item"
+                            >
+                                About us
+                            </NavbarItem>
+                        </Link>
+                        <Link href="/#faq">
                             <NavbarItem active={isActive("/", "faq")}>
                                 FAQs
                             </NavbarItem>
-                        </div>
+                        </Link>
                     </div>
                     <div
                         className="mb-24 rounded-full border border-red-500 p-4"
