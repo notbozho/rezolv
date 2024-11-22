@@ -5,6 +5,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MobileNavbar from "./components/MobileNavbar";
+import { Analytics } from "@vercel/analytics/react";
 
 const switzer = localFont({
     src: "./fonts/Switzer.woff2",
@@ -61,6 +62,7 @@ export default function RootLayout({
                 <MobileNavbar className="block lg:hidden" />
                 <Navbar className="hidden lg:block" />
                 {children}
+                <Analytics />
                 <Footer />
             </body>
         </html>
