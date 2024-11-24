@@ -132,7 +132,7 @@ export default function Hero() {
                 </button>
             </div>
             <div
-                className="grid max-w-[80%] grid-cols-1 gap-4 text-center text-white opacity-0 md:grid-cols-4 lg:max-w-[40%]"
+                className="grid max-w-[80%] grid-cols-1 gap-4 text-center text-white opacity-0 md:grid-cols-4 lg:max-w-[6       0%]"
                 id="stats"
             >
                 <div>
@@ -143,7 +143,8 @@ export default function Hero() {
                         7
                     </p> */}
                     <AnimatedNumber
-                        endValue={10}
+                        endValue={40}
+                        prefix=">"
                         delay={2}
                         className="text-3xl font-medium text-white lg:text-5xl"
                     />
@@ -153,7 +154,8 @@ export default function Hero() {
                 </div>
                 <div>
                     <AnimatedNumber
-                        endValue={60}
+                        endValue={100}
+                        prefix=">"
                         delay={2}
                         suffix="K"
                         className="text-3xl font-medium text-white lg:text-5xl"
@@ -164,22 +166,25 @@ export default function Hero() {
                 </div>
                 <div>
                     <AnimatedNumber
-                        endValue={9}
+                        prefix=">$"
+                        endValue={850}
+                        suffix="M"
                         delay={2}
                         className="text-3xl font-medium text-white lg:text-5xl"
                     />
                     <p className="text-sm font-light text-neutral-500 lg:text-base">
-                        Criticals Found
+                        in TVL held by audited contracts
                     </p>
                 </div>
                 <div>
                     <AnimatedNumber
-                        endValue={50}
+                        endValue={300}
                         delay={2}
+                        suffix="+"
                         className="text-3xl font-medium text-white lg:text-5xl"
                     />
                     <p className="text-sm font-light text-neutral-500 lg:text-base">
-                        Highs/Mediums Found
+                        Critical, Highs & Mediums Found
                     </p>
                 </div>
             </div>
