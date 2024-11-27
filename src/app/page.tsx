@@ -5,11 +5,13 @@ import QuoteSection from "@/app/sections/Quote";
 import Services from "@/app/sections/Services";
 import Testimonials from "@/app/sections/Testimonials";
 import "@/app/styles/styles.css";
+import Partners from "./sections/Partners";
 
 export default function HomePage() {
     return (
         <>
             <Hero />
+            <Partners />
             <Services />
             <Testimonials />
             <FAQ />
