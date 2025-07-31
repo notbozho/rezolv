@@ -1,0 +1,134 @@
+---
+title: "Secure Deployment: The hidden risks after your audit"
+author: "@0xBozho"
+author_avatar: "authors/0xbozho.jpg"
+date: "2025-07-13"
+description: "Why audited protocols still get hacked: 4 post-audit risks you must address to secure your DeFi protocol."
+cover: "covers/secure_deployment_cover.png"
+published: true
+---
+
+# Secure Deployment: The hidden risks after your audit
+
+Smart contract audits are a fundamental requirement for any secure web3 protocol. They catch vulnerabilities, validate business logic, and provide essential security assessments that can mean the difference between a successful protocol and a catastrophic exploit.
+
+But here's the sobering reality: some of the most devastating DeFi hacks in 2024-2025 happened to audited protocols.
+
+The problem isn't with audits themselves. The problem is the dangerous misconception that a security audit is a permanent security certificate - a solution that guarantees safety forever. This mindset has cost the industry billions of dollars.
+
+To prevent falling into these security traps, here are the most critical post-audit considerations that developers and protocol founders must keep top of mind. These six risk categories represent the primary ways audited protocols get compromised in the real world.
+
+## 1. Unaudited Upgrades and Proxy Risks
+
+Most modern DeFi protocols use proxy contracts to enable upgradeability - a powerful features that allows teams to fix bugs, add features, and respond to changing market conditions. However, this flexibility creates one of the most exploited attack vectors in DeFi.
+
+<center>
+    <img
+        src="assets/secure_deployment/upgradeable contracts.png"
+        alt="upgradeable contract"
+        width="800"
+    />
+</center>
+
+### Unaudited upgrade trap
+
+Your smart contract audits cover the implementation logic at a specific point in time. But proxy contracts introduce a blind spot: **any feature upgrade can completely bypass the security guarantees of your original audit.**
+
+The most dangerous scenario is teams pushing upgrades without security review, assuming that "small changes" couldn't possibly introduce vulnerabilities. This assumption has led to some of the costliest exploits in recent DeFi history. Some examples being: [2m USD Bedrock hack](https://rekt.news/bedrock-rekt) or [4.9m USD Shezmu hack](https://rekt.news/shezmu-rekt).
+
+### Common proxy pitfalls
+
+-   Insufficient Upgrade Delays - Many protocols implement timelock contracts but set delays too short to allow proper community review.
+-   Untrusted Admin Keys - Single-signature admin keys controlling proxy upgrades represent single points of failure. If compromised, an attacker can upgrade to malicious implementations instantly.
+-   Missing Upgrade Verification - Teams often skip security reviews for "minor" upgrades, not realizing that small changes can have massive security implications.
+
+## 2. Owner and Admin key compromise
+
+Smart contract audits focus on code vulnerabilities, but they rarely examine the operational security surrounding privileged keys. This oversight creates a massive blind spot that attackers increasingly exploit.
+
+### The human factor in Smart Contract Security
+
+Even perfectly audited smart contracts can be compromised through admin key attacks. These keys often control critical functions like:
+
+-   Emergency pause mechanisms
+-   Parameter updates (interest rates, collateral ratios)
+-   Treasury fund management
+-   Protocol upgrade authorizations
+
+<center>
+    <img
+        src="assets/secure_deployment/admin attack vectors.png"
+        alt="admin attack vectors "
+        width="800"
+    />
+</center>
+
+### Common attack vectors
+
+1. **Phishing & Social Engineering** - Attackers create fake interfaces, urgent communications, or impersonate trusted parties to capture private keys. These campaigns target team members through psychological manipulation, often creating artificial urgency or authority to bypass normal security procedures. Modern social engineering attacks are highly targeted and can involve months of reconnaissance.
+2. **Insecure Key Storage** - Many teams store private keys in cloud services, password manages, or unencrypted local files. Even encrypted storage can be vulnerable if passwords are weak or reused.
+3. **Browser Wallet Exploits** - MetaMask, browser extensions, and hot wallets remain prime targets for malware and browser-based attacks. Attacks on browser extensions have compromised numerous protocol admin keys. Example being the [1.43b USD Bybit hack](https://rekt.news/bybit-rekt)
+4. **Device Compromise** - Devices used for protocol administration become high-value targets. Malware specifically designed to target crypto operations can remain dormant until detecting administrative transactions, then intercept or modify them.
+5. **Insider Employee Threats** - Whether malicious or accidental, insider threats represent a growing risk as protocols scale their teams. Unhappy employees, social engineering of junior team members, or simple human error with administrative privileges have all led to significant compromises.
+
+### Operational Security Best Practices
+
+-   **Multisig Wallets** - Implement m-of-n multisig schemes for all administrative functions. A 3-of-5 setup ensure no single compromised key can authorize critical actions.
+
+-   **Hardware Key Isolation** - Use dedicated hardware wallets for administrative functions, never connected to internet-facing devices.
+
+-   **Key Rotation Procedures** - Establish regular key rotation schedules, especially after team member departures or security incidents.
+
+-   **Separated Responsibilities** - Different keys should control different functions - treasury management, emergency responses, and routine parameter updates should require separate authorizations.
+
+## 3. Misconfigurations & Wrong Assumptions
+
+Audit reports often include assumptions about deployment conditions, network parameters, or operational procedures. When these assumptions aren't met in production, previously secure code can become vulnerable.
+
+<center>
+    <img
+        src="assets/secure_deployment/deployment checklist.png"
+        alt="deployment checklist"
+        width="800"
+    />
+</center>
+
+### Common Configuration Mistakes
+
+-   **Wrong Contract Addresses** - Deploying with incorrect oracle addresses, token contracts, or governance contracts can bypass security mechanisms entirely.
+-   **Disabled Safety Mechanisms** - Emergency pause functions, circuit breakers, or withdraw limits sometimes get disabled in production deployments to "improve user experience".
+-   **Incorrect Permission Settings** - Role-based access controls misconfigured during deployment can grand excessive permissions to wrong addresses.
+-   **Network-Specific Assumptions** - Protocols audited on Ethereum but deployed on faster L2s may have different security assumptions around block finality, gas costs, and MEV.
+
+### Environmental Assumption Failures
+
+-   **Gas Price Assumptions** - Security mechanisms relying on gas costs to prevent attacks may fail when gas prices drop significantly.
+-   **Block Time Dependencies** - Time-based security mechanisms (cooldowns, rate limits) may behave differently across networks with different block times.
+
+## 4. Monitoring & Incident Response
+
+Most protocols launch with sophisticated smart contracts but primitive monitoring infrastructure. This blind spot means that attacks often go undetected until significant damage has occurred.
+
+### The Monitoring Gap
+
+-   **Transaction Pattern Analysis** - Unusual transaction patterns, sudden liquidity pool balances, and token price deviations can identify economic attacks before they succeed.
+-   **Economic Health Metrics** - Monitoring collateralization ratios, liquidity pool balances, and token price deviations can identify economic attacks before they succeed.
+-   **Integration Monitoring** - Tracking the health and behavior of external dependencies (oracles, bridges, yield sources) helps identify cascade risks
+
+### Incident Response Preparedness
+
+-   **Response Team Coordination** - Many protocols lack clear incident response procedures or fail to maintain 24/7 response capabilities.
+-   **Emergency Actions** - Teams often don't practice emergency procedures like protocol pausing, parameter adjustments, or governance expeditions.
+-   **Communications Protocols** - Clear communication channels and prepared messaging for different types of incidents help minimize panic and misinformation.
+
+## Conclusion
+
+Your audit reports represent that you've taken security seriously and invested in professional review. But treating it as the finish line is a dangerous mistake that has cost the industry billions of dollars.
+
+The most successful DeFi protocols understand that security (like everything else) is a marathon, not a sprint. They build continuous monitoring systems, maintain operational security discipline, plan for inevitable changes, and engage with security as an ongoing discipline rather than a one-time checkbox.
+
+The uncomfortable truth is that perfect security doesn't exists, especially in the rapidly evolving DeFi landscape. But protocols that acknowledge post-audit risks and build systematic approaches to address them build significantly more resilient protocols.
+
+## Partner with Us Beyond the Audit
+
+Us at Rezolv, we don't just deliver audit reports - we help you build lasting security cultures. Let's discuss how we can support your protocol's journey toward continuous security success.

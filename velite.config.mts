@@ -21,6 +21,8 @@ export default defineConfig({
                     slug: s.path(), // validate format, unique in posts collection
                     description: s.string().max(200).optional(),
                     published: s.boolean().default(true),
+                    author: s.string().optional(),
+                    author_avatar: s.image().optional(),
                     date: s.isodate(), // input Date-like string, output ISO Date string.
                     cover: s.image(), // input image relative path, output image object with blurImage.
                     metadata: s.metadata(), // extract markdown reading-time, word-count, etc.
