@@ -102,7 +102,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                             {post.description}
                         </p>
                     )}
-                    <div className="hover: group flex cursor-pointer items-center gap-2 rounded p-2 align-middle transition-all duration-300">
+                    <div className="hover: flex items-center gap-2 rounded p-2 align-middle">
                         {post.author && post.author_avatar && (
                             <>
                                 <p className="pr-2 text-lg text-white">
@@ -114,7 +114,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                                     className="h-10 w-10 rounded-full"
                                 />
                                 <a
-                                    className="text-neutral-400 group-hover:underline"
+                                    className="cursor-pointer text-neutral-400 hover:underline"
                                     href="https://x.com/0xBozho"
                                     target="_blank"
                                     rel="noopener noreferrer"
