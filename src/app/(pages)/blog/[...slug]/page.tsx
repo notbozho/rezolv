@@ -102,6 +102,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                             {post.description}
                         </p>
                     )}
+
                     <div className="hover: flex items-center gap-2 rounded p-2 align-middle">
                         {post.author && post.author_avatar && (
                             <>
@@ -130,6 +131,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                         </p>
                     </div>
                 </div>
+
                 <div className="mx-auto w-full p-2 text-start lg:w-1/2">
                     <Mdx code={post.content} />
                 </div>
