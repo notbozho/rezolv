@@ -122,7 +122,7 @@ export default function Testimonials() {
                                                 <p className="text-white">
                                                     {testimonial.name}
                                                 </p>
-                                                <p className="text-neutral-500">
+                                                <p className="text-neutral-400">
                                                     {testimonial.title}
                                                 </p>
                                             </div>
