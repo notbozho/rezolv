@@ -107,36 +107,36 @@ export default function Hero() {
             id="hero"
         >
             <div
-                className="absolute -z-30 h-full w-full bg-gradient-to-tr from-neutral-800 via-black via-40% to-neutral-900 opacity-0"
+                className="absolute -z-30 h-full w-full bg-gradient-to-tr from-neutral-800 via-black via-40% to-neutral-900"
                 id="bg_gradient"
             ></div>
-            <div className="absolute -left-1 -top-1 right-0 opacity-0" id="bg">
+            <div className="absolute -left-1 -top-1 right-0" id="bg">
                 <Grid />
             </div>
             <div className="container relative mx-auto flex flex-col items-center justify-center space-y-8 overflow-hidden">
                 <h1
-                    className="px-2 pt-32 text-center text-3xl font-light text-white opacity-0 md:px-0 md:text-6xl"
+                    className="px-2 pt-32 text-center text-3xl font-light text-white md:px-0 md:text-6xl"
                     id="header"
                 >
                     Elevate your smart contracts <br />
                     with expert development and security reviews
                 </h1>
                 <p
-                    className="max-w-[90%] text-center text-neutral-400 opacity-0 sm:text-base lg:max-w-screen-lg lg:pb-10"
+                    className="max-w-[90%] text-center text-neutral-400 sm:text-base lg:max-w-screen-lg lg:pb-10"
                     id="subheader"
                 >
                     Delivering reliable smart contract solutions that drive
                     blockchain innovation.
                 </p>
                 <button
-                    className="cursor-pointer rounded-lg bg-white px-14 py-2 text-lg text-black opacity-0"
+                    className="cursor-pointer rounded-lg bg-white px-14 py-2 text-lg text-black"
                     id="btn"
                 >
                     Contact us
                 </button>
             </div>
             <div
-                className="lg:max-w-[6 0%] grid max-w-[80%] grid-cols-1 gap-4 text-center text-white opacity-0 md:grid-cols-4"
+                className="lg:max-w-[6 0%] grid max-w-[80%] grid-cols-1 gap-4 text-center text-white md:grid-cols-4"
                 id="stats"
             >
                 <div>
