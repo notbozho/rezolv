@@ -3,9 +3,11 @@ import localFont from "next/font/local";
 import "./styles/globals.css";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import MobileNavbar from "./components/MobileNavbar";
 import { Analytics } from "@vercel/analytics/react";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import("./components/Footer"));
 
 const switzer = localFont({
     src: "./fonts/Switzer.woff2",

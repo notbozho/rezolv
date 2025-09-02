@@ -132,6 +132,7 @@ export default function Partners() {
                                             alt={testimonial.title}
                                             width={100}
                                             height={100}
+                                            loading="lazy"
                                             className="min-h-20 min-w-20 rounded-md lg:min-h-24 lg:min-w-24"
                                         />
                                     </div>
