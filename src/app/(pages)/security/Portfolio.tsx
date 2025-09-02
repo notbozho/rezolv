@@ -90,6 +90,7 @@ const Portfolio: FC = () => {
                         {slicedFiles.length > 0 &&
                             slicedFiles.map((file, index) => (
                                 <Link
+                                    aria-label={"Project link"}
                                     href={file.html_url ? file.html_url : ""}
                                     key={index}
                                 >
@@ -112,7 +113,10 @@ const Portfolio: FC = () => {
                             <p className="text-sm font-light text-neutral-400">
                                 Browse
                             </p>
-                            <Link href="https://github.com/RezolvSolutions/Audits/tree/main/reports/pdf-format">
+                            <Link
+                                aria-label="View all projects"
+                                href="https://github.com/RezolvSolutions/Audits/tree/main/reports/pdf-format"
+                            >
                                 <div className="flex cursor-pointer">
                                     <p className="text-2xl font-medium hover:underline">
                                         View all

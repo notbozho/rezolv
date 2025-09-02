@@ -27,24 +27,28 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-wrap items-center justify-center text-center text-white lg:flex-nowrap lg:space-x-8">
                         <Link
+                            aria-label="Solutions link"
                             href="/#solutions"
                             className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             Solutions
                         </Link>
                         <Link
+                            aria-label="Blog link"
                             href="/blog"
                             className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             Blog
                         </Link>
                         <Link
+                            aria-label="Testimonials link"
                             href="/#testimonials"
                             className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             Testimonials
                         </Link>
                         <Link
+                            aria-label="Portfolio link"
                             href="https://github.com/RezolvSolutions/Audits"
                             className="flex basis-1/2 cursor-pointer items-center justify-center gap-2 transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
@@ -52,12 +56,14 @@ export default function Footer() {
                             <Arrow className="mb-1 h-3 w-3 -rotate-45 fill-white opacity-80" />
                         </Link>
                         <Link
+                            aria-label="About us link"
                             href="/#aboutus"
                             className="basis-1/2 cursor-pointer text-nowrap transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
                             About us
                         </Link>
                         <Link
+                            aria-label="FAQs link"
                             href="/#faq"
                             className="basis-1/2 cursor-pointer transition-all duration-500 ease-in-out hover:text-red-200 lg:basis-0"
                         >
@@ -70,13 +76,22 @@ export default function Footer() {
                         © 2024 Rezolv Solutions All Rights Reserved
                     </span>
                     <div className="flex gap-6">
-                        <Link href="https://t.me/maslarovk">
+                        <Link
+                            aria-label="Telegram link"
+                            href="https://t.me/maslarovk"
+                        >
                             <Telegram className="h-7 w-6 cursor-pointer text-white hover:text-red-400" />
                         </Link>
-                        <Link href="https://github.com/RezolvSolutions/Audits">
+                        <Link
+                            aria-label="GitHub link"
+                            href="https://github.com/RezolvSolutions/Audits"
+                        >
                             <GitHub className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
                         </Link>
-                        <Link href="https://twitter.com/rezolv_sol">
+                        <Link
+                            aria-label="Twitter link"
+                            href="https://twitter.com/rezolv_sol"
+                        >
                             <X className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
                         </Link>
                     </div>

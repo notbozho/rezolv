@@ -28,14 +28,15 @@ export default function QuoteSection({
                     <h2 className="pb-4 text-4xl text-white md:text-5xl">
                         {title}
                     </h2>
-                    <p className="pb-10 text-neutral-400 ">
-                        {description}
-                    </p>
+                    <p className="pb-10 text-neutral-400">{description}</p>
                 </div>
                 {/* header end */}
 
                 <div className="relative flex w-full items-center justify-center lg:h-[8rem] lg:w-[60%] lg:justify-end lg:pr-10">
-                    <Link href="https://t.me/maslarovk">
+                    <Link
+                        aria-label="Get a quote button"
+                        href="https://t.me/maslarovk"
+                    >
                         <button className="group relative flex cursor-pointer overflow-hidden rounded-lg bg-white px-14 py-2 text-lg text-black">
                             <span className="transition duration-500 group-hover:translate-x-40">
                                 Get a quote

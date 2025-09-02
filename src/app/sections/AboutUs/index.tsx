@@ -74,6 +74,7 @@ const TeamCard = ({
                 alt="team"
                 width={350}
                 height={350}
+                loading="lazy"
                 className="h-64 w-64 rounded-lg md:h-[20rem] md:w-[20rem] lg:h-[24rem] lg:w-[24rem]"
             />
             <div
@@ -90,13 +91,13 @@ const TeamCard = ({
                         id="socials"
                         className="flex w-full justify-center gap-6 py-2"
                     >
-                        <Link href={telegram}>
+                        <Link aria-label="Telegram link" href={telegram}>
                             <Telegram className="h-7 w-6 cursor-pointer text-white hover:text-red-400" />
                         </Link>
-                        <Link href={github}>
+                        <Link aria-label="GitHub link" href={github}>
                             <GitHub className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
                         </Link>
-                        <Link href={twitter}>
+                        <Link aria-label="Twitter link" href={twitter}>
                             <X className="h-6 w-6 cursor-pointer text-white hover:text-red-400" />
                         </Link>
                     </div>

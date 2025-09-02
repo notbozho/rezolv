@@ -80,7 +80,10 @@ export default function DevelopmentPage() {
                         providing ongoing support, ensuring a seamless
                         integration with your business or project.
                     </p>
-                    <Link href="https://t.me/maslarovk">
+                    <Link
+                        aria-label="Get in touch button"
+                        href="https://t.me/maslarovk"
+                    >
                         <button
                             className="cursor-pointer rounded-lg bg-white px-14 py-2 text-lg text-black"
                             id="btn"

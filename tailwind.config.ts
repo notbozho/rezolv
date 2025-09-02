@@ -17,7 +17,7 @@ const config: Config = {
                 foreground: "var(--foreground)",
             },
             backgroundImage: {
-                noise: "url('/assets/bg/noise.png')",
+                noise: "url('/assets/bg/noise.webp')",
             },
             boxShadow: {
                 glow: "0 0 42px 2px rgba(255, 0, 0, 0.1)",

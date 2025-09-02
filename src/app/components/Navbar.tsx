@@ -42,7 +42,11 @@ export const DropdownItem = ({
     href: string;
     src: string;
 }) => (
-    <Link href={href} className="group relative flex">
+    <Link
+        aria-label={`${title} link`}
+        href={href}
+        className="group relative flex"
+    >
         <Image
             src={src}
             alt={title}
@@ -182,7 +186,10 @@ export default function Navbar({ className = "" }: { className?: string }) {
                             height={100}
                             className="h-16 w-16"
                         />
-                        <a className="cursor-pointer pr-6 text-xl text-white">
+                        <a
+                            href="https://rezolvsolutions.com"
+                            className="cursor-pointer pr-6 text-xl text-white"
+                        >
                             Rezolv
                         </a>
                     </div>
@@ -190,7 +197,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
                         className="relative"
                         onMouseEnter={() => setDropdown(true)}
                     >
-                        <Link href="/#solutions">
+                        <Link aria-label="Solutions Link" href="/#solutions">
                             <NavbarItem>Solutions</NavbarItem>
                         </Link>
                         {dropdown && (
@@ -233,9 +240,8 @@ export default function Navbar({ className = "" }: { className?: string }) {
                     </div>
 
                     <Link
-                        href="
-                            https://github.com/RezolvSolutions/Audits
-                        "
+                        aria-label="Portfolio link"
+                        href="https://github.com/RezolvSolutions/Audits"
                     >
                         <NavbarItem className="flex items-center gap-2 hover:fill-red-200">
                             Portfolio
@@ -252,12 +258,14 @@ export default function Navbar({ className = "" }: { className?: string }) {
                     </div>
                 </div>
 
-                <button
-                    onClick={() => router.push("https://t.me/maslarovk")}
-                    className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200"
-                >
-                    Contact us
-                </button>
+                <Link aria-label="Telegram link" href="https://t.me/maslarovk">
+                    <button
+                        onClick={() => router.push("https://t.me/maslarovk")}
+                        className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200"
+                    >
+                        Contact us
+                    </button>
+                </Link>
             </div>
         </nav>
     );

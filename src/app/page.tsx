@@ -1,11 +1,12 @@
-import AboutUs from "@/app/sections/AboutUs";
-import FAQ from "@/app/sections/FAQ";
+import dynamic from "next/dynamic";
 import Hero from "@/app/sections/Hero";
-import QuoteSection from "@/app/sections/Quote";
 import Services from "@/app/sections/Services";
-import Testimonials from "@/app/sections/Testimonials";
-import "@/app/styles/styles.css";
 import Partners from "./sections/Partners";
+
+const Testimonials = dynamic(() => import("@/app/sections/Testimonials"));
+const FAQ = dynamic(() => import("@/app/sections/FAQ"));
+const AboutUs = dynamic(() => import("@/app/sections/AboutUs"));
+const QuoteSection = dynamic(() => import("@/app/sections/Quote"));
 
 export default function HomePage() {
     return (

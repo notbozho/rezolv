@@ -193,12 +193,16 @@ export default function MobileNavbar({
                             height={100}
                             className="h-20 w-20"
                         />
-                        <a className="cursor-pointer pr-6 text-2xl text-white">
+                        <a
+                            href="https://rezolvsolutions.com"
+                            className="cursor-pointer pr-6 text-2xl text-white"
+                        >
                             Rezolv
                         </a>
                     </div>
                     <div className="flex flex-col items-center gap-6 text-white">
                         <Link
+                            aria-label="Solutions link"
                             onClick={() => closeAnimation()}
                             href="/#solutions"
                         >
@@ -209,7 +213,11 @@ export default function MobileNavbar({
                                 Solutions
                             </NavbarItem>
                         </Link>
-                        <Link onClick={() => closeAnimation()} href="/blog">
+                        <Link
+                            aria-label="Blog link"
+                            onClick={() => closeAnimation()}
+                            href="/blog"
+                        >
                             <NavbarItem
                                 active={inBlog()}
                                 className="flex items-center gap-2 hover:fill-red-200"
@@ -220,6 +228,7 @@ export default function MobileNavbar({
                         </Link>
 
                         <Link
+                            aria-label="Testimonials link"
                             onClick={() => closeAnimation()}
                             href="/#testimonials"
                         >
@@ -231,7 +240,10 @@ export default function MobileNavbar({
                             </NavbarItem>
                         </Link>
 
-                        <Link href="https://github.com/RezolvSolutions/Audits">
+                        <Link
+                            aria-label="Portfolio link"
+                            href="https://github.com/RezolvSolutions/Audits"
+                        >
                             <NavbarItem
                                 id="mobile_nav_item"
                                 className="flex items-center gap-2 hover:fill-red-200"
@@ -240,7 +252,7 @@ export default function MobileNavbar({
                                 <Arrow className="mb-2 h-4 w-4 -rotate-45 fill-white opacity-80" />
                             </NavbarItem>
                         </Link>
-                        <Link href="/#aboutus">
+                        <Link aria-label="About us link" href="/#aboutus">
                             <NavbarItem
                                 active={isActive("/", "aboutus")}
                                 id="mobile_nav_item"
@@ -248,7 +260,7 @@ export default function MobileNavbar({
                                 About us
                             </NavbarItem>
                         </Link>
-                        <Link href="/#faq">
+                        <Link aria-label="FAQs link" href="/#faq">
                             <NavbarItem
                                 id="mobile_nav_item"
                                 active={isActive("/", "faq")}
@@ -279,9 +291,14 @@ export default function MobileNavbar({
                         />
                     </div>
                     <div className="flex flex-shrink-0 gap-4">
-                        <button className="h-10 w-fit cursor-pointer rounded-lg bg-white px-4 py-1.5 text-sm text-black hover:bg-neutral-200">
-                            Contact
-                        </button>
+                        <Link
+                            aria-label="Telegram link"
+                            href="https://t.me/maslarovk"
+                        >
+                            <button className="h-10 w-fit cursor-pointer rounded-lg bg-white px-4 py-1.5 text-sm text-black hover:bg-neutral-200">
+                                Contact
+                            </button>
+                        </Link>
                         <div
                             className="flex h-10 w-10 items-center justify-center rounded-lg border p-1"
                             onClick={handleMenu}

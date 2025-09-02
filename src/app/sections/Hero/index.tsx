@@ -1,9 +1,13 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Grid from "@/app/components/ui/Grid";
+import dynamic from "next/dynamic";
 import { gsap } from "gsap";
 import AnimatedNumber from "@/app/components/AnimatedNumber";
+
+const Grid = dynamic(() => import("@/app/components/ui/Grid"), {
+    ssr: false,
+});
 
 export default function Hero() {
     useEffect(() => {
@@ -15,16 +19,16 @@ export default function Hero() {
         })
             .to("#bg", {
                 opacity: 1,
-                duration: 0.5,
+                duration: 0.2,
                 y: 0,
             })
             .to(
                 "#bg_gradient",
                 {
                     opacity: 1,
-                    duration: 0.5,
+                    duration: 0.3,
                 },
-                "<0.3",
+                "<0.1",
             );
 
         const tlHeader = gsap.timeline();
@@ -35,7 +39,7 @@ export default function Hero() {
         tlHeader
             .from(q("#header"), {
                 opacity: 0,
-                duration: 0.7,
+                duration: 0.2,
                 y: 20,
                 ease: "expo.inOut",
             })
@@ -44,7 +48,7 @@ export default function Hero() {
                 {
                     opacity: 0,
                     scale: 0.8,
-                    duration: 0.5,
+                    duration: 0.3,
                     ease: "expo.inOut",
                 },
                 "<",
@@ -53,7 +57,7 @@ export default function Hero() {
                 q("#header"),
                 {
                     opacity: 1,
-                    duration: 1.7,
+                    duration: 0.5,
                     y: 0,
                     ease: "expo.inOut",
                 },
@@ -63,32 +67,32 @@ export default function Hero() {
                 q("#subheader"),
                 {
                     opacity: 1,
-                    duration: 1.5,
+                    duration: 0.2,
                     y: 0,
                     ease: "expo.inOut",
                 },
-                "<0.3",
+                "<0.2",
             )
             .to(
                 q("#btn"),
                 {
                     opacity: 1,
-                    duration: 1.5,
+                    duration: 0.8,
                     scale: 1,
                     y: 0,
                     ease: "expo.inOut",
                 },
-                "<0.3",
+                "<0.2",
             )
             .to(
                 q("#stats"),
                 {
                     opacity: 1,
-                    duration: 1.5,
+                    duration: 0.9,
                     y: 0,
                     ease: "expo.inOut",
                 },
-                "<0.3",
+                "<0.2",
             );
 
         return () => {
@@ -132,7 +136,7 @@ export default function Hero() {
                 </button>
             </div>
             <div
-                className="grid max-w-[80%] grid-cols-1 gap-4 text-center text-white opacity-0 md:grid-cols-4 lg:max-w-[6       0%]"
+                className="lg:max-w-[6 0%] grid max-w-[80%] grid-cols-1 gap-4 text-center text-white opacity-0 md:grid-cols-4"
                 id="stats"
             >
                 <div>
