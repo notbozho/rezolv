@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import AnimatedNumber from "@/app/components/AnimatedNumber";
 
 const Grid = dynamic(() => import("@/app/components/ui/Grid"), {
@@ -10,96 +10,96 @@ const Grid = dynamic(() => import("@/app/components/ui/Grid"), {
 });
 
 export default function Hero() {
-    useEffect(() => {
-        const tlBG = gsap.timeline();
+    // useEffect(() => {
+    //     const tlBG = gsap.timeline();
 
-        tlBG.set("#bg", {
-            opacity: 0,
-            y: 60,
-        })
-            .to("#bg", {
-                opacity: 1,
-                duration: 0.2,
-                y: 0,
-            })
-            .to(
-                "#bg_gradient",
-                {
-                    opacity: 1,
-                    duration: 0.3,
-                },
-                "<0.1",
-            );
+    //     tlBG.set("#bg", {
+    //         opacity: 0,
+    //         y: 60,
+    //     })
+    //         .to("#bg", {
+    //             opacity: 1,
+    //             duration: 0.2,
+    //             y: 0,
+    //         })
+    //         .to(
+    //             "#bg_gradient",
+    //             {
+    //                 opacity: 1,
+    //                 duration: 0.3,
+    //             },
+    //             "<0.1",
+    //         );
 
-        const tlHeader = gsap.timeline();
+    //     const tlHeader = gsap.timeline();
 
-        const element = document.querySelector("#hero");
-        const q = gsap.utils.selector(element);
+    //     const element = document.querySelector("#hero");
+    //     const q = gsap.utils.selector(element);
 
-        tlHeader
-            .from(q("#header"), {
-                opacity: 0,
-                duration: 0.2,
-                y: 20,
-                ease: "expo.inOut",
-            })
-            .from(
-                q("#btn"),
-                {
-                    opacity: 0,
-                    scale: 0.8,
-                    duration: 0.3,
-                    ease: "expo.inOut",
-                },
-                "<",
-            )
-            .to(
-                q("#header"),
-                {
-                    opacity: 1,
-                    duration: 0.5,
-                    y: 0,
-                    ease: "expo.inOut",
-                },
-                "<0.1",
-            )
-            .to(
-                q("#subheader"),
-                {
-                    opacity: 1,
-                    duration: 0.2,
-                    y: 0,
-                    ease: "expo.inOut",
-                },
-                "<0.2",
-            )
-            .to(
-                q("#btn"),
-                {
-                    opacity: 1,
-                    duration: 0.8,
-                    scale: 1,
-                    y: 0,
-                    ease: "expo.inOut",
-                },
-                "<0.2",
-            )
-            .to(
-                q("#stats"),
-                {
-                    opacity: 1,
-                    duration: 0.9,
-                    y: 0,
-                    ease: "expo.inOut",
-                },
-                "<0.2",
-            );
+    //     tlHeader
+    //         .from(q("#header"), {
+    //             opacity: 0,
+    //             duration: 0.2,
+    //             y: 20,
+    //             ease: "expo.inOut",
+    //         })
+    //         .from(
+    //             q("#btn"),
+    //             {
+    //                 opacity: 0,
+    //                 scale: 0.8,
+    //                 duration: 0.3,
+    //                 ease: "expo.inOut",
+    //             },
+    //             "<",
+    //         )
+    //         .to(
+    //             q("#header"),
+    //             {
+    //                 opacity: 1,
+    //                 duration: 0.5,
+    //                 y: 0,
+    //                 ease: "expo.inOut",
+    //             },
+    //             "<0.1",
+    //         )
+    //         .to(
+    //             q("#subheader"),
+    //             {
+    //                 opacity: 1,
+    //                 duration: 0.2,
+    //                 y: 0,
+    //                 ease: "expo.inOut",
+    //             },
+    //             "<0.2",
+    //         )
+    //         .to(
+    //             q("#btn"),
+    //             {
+    //                 opacity: 1,
+    //                 duration: 0.8,
+    //                 scale: 1,
+    //                 y: 0,
+    //                 ease: "expo.inOut",
+    //             },
+    //             "<0.2",
+    //         )
+    //         .to(
+    //             q("#stats"),
+    //             {
+    //                 opacity: 1,
+    //                 duration: 0.9,
+    //                 y: 0,
+    //                 ease: "expo.inOut",
+    //             },
+    //             "<0.2",
+    //         );
 
-        return () => {
-            tlBG.kill();
-            tlHeader.kill();
-        };
-    }, []);
+    //     return () => {
+    //         tlBG.kill();
+    //         tlHeader.kill();
+    //     };
+    // }, []);
 
     return (
         <section
