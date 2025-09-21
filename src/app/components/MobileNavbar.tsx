@@ -293,7 +293,7 @@ export default function MobileNavbar({
                     <div className="flex flex-shrink-0 gap-4">
                         <Link
                             aria-label="Telegram link"
-                            href="https://t.me/maslarovk"
+                            href="https://t.me/radev_eth"
                         >
                             <button className="h-10 w-fit cursor-pointer rounded-lg bg-white px-4 py-1.5 text-sm text-black hover:bg-neutral-200">
                                 Contact

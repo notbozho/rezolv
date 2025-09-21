@@ -73,10 +73,7 @@ export default function SecurityPage() {
                         for deployment on any blockchain with our reliable smart
                         contract audit services.
                     </p>
-                    <Link
-                        aria-label="Get in touch button"
-                        href="https://t.me/maslarovk"
-                    >
+                    <Link href="https://t.me/radev_eth">
                         <button
                             className="cursor-pointer rounded-lg bg-white px-14 py-2 text-lg text-black"
                             id="btn"

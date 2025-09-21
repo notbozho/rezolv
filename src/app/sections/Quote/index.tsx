@@ -33,10 +33,7 @@ export default function QuoteSection({
                 {/* header end */}
 
                 <div className="relative flex w-full items-center justify-center lg:h-[8rem] lg:w-[60%] lg:justify-end lg:pr-10">
-                    <Link
-                        aria-label="Get a quote button"
-                        href="https://t.me/maslarovk"
-                    >
+                    <Link href="https://t.me/radev_eth">
                         <button className="group relative flex cursor-pointer overflow-hidden rounded-lg bg-white px-14 py-2 text-lg text-black">
                             <span className="transition duration-500 group-hover:translate-x-40">
                                 Get a quote

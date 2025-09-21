@@ -76,10 +76,7 @@ export default function Footer() {
                         © 2024 Rezolv Solutions All Rights Reserved
                     </span>
                     <div className="flex gap-6">
-                        <Link
-                            aria-label="Telegram link"
-                            href="https://t.me/maslarovk"
-                        >
+                        <Link href="https://t.me/radev_eth">
                             <Telegram className="h-7 w-6 cursor-pointer text-white hover:text-red-400" />
                         </Link>
                         <Link

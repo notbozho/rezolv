@@ -258,14 +258,12 @@ export default function Navbar({ className = "" }: { className?: string }) {
                     </div>
                 </div>
 
-                <Link aria-label="Telegram link" href="https://t.me/maslarovk">
-                    <button
-                        onClick={() => router.push("https://t.me/maslarovk")}
-                        className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200"
-                    >
-                        Contact us
-                    </button>
-                </Link>
+                <button
+                    onClick={() => router.push("https://t.me/radev_eth")}
+                    className="cursor-pointer rounded-lg bg-white px-6 py-1.5 text-black hover:bg-neutral-200"
+                >
+                    Contact us
+                </button>
             </div>
         </nav>
     );
